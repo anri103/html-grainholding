@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<!-- (c) Startsite Digital Agency | https://startsite.studio/ -->
+<html lang="ru">
+
+<head>
+    <title>Вакансии Грейн Холдинг</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-transparent fixed-top" id="navbar-main">
+            <div class="container">
+
+                <!-- Logo desktop -->
+                <a class="navbar-brand hover-opacity" href="index.html">
+                    <img class="logo-black" src="images/logo_black.svg" alt="">
+                    <img class="logo-white" src="images/logo_white.svg" alt="">
+                </a>
+
+                <!-- Menu toggler -->
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
+                </button>
+
+                <!-- Main Menu -->
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="brands.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Бренды</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="brands.html#brand-01">Рязаночка</a>
+                                <a class="dropdown-item" href="brands.html#brand-02">Русский хлеб</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Пресс-центр</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gde-kupit.html">Где купить</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="partners.html">Партнерам</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="akcii.html">Акции</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="razvitie.html">Развитие</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="vakansii.html">Вакансии</a>
+                        </li>
+                    </ul>
+
+                    <!-- Search -->
+                    <ul class="nav navbar-icons">
+                        <li class="nav-item">
+                            <a class="nav-link js-search-open" href="#">
+                                <i class="icon icon-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <!-- Title -->
+        <section class="section position-relative d-flex align-items-center vh-100 color-white bg-img" style="background-image: url(images/bg-vakansii-01.png);">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="position-relative z-index-1 text-center">
+                            <h1 class="ff-title">Вакансии</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="position-absolute bottom-0 w-100" src="images/border-01.png" alt="">
+        </section>
+
+        <!-- Преимущества работы у нас -->
+        <section class="section">
+            <div class="container">
+                <div class="mb-25">
+                    <div class="row g-4">
+                        <div class="col-lg-8">
+                            <h2 class="ff-title mb-0">Преимущества работы у нас</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">
+                        <div class="col text-center">
+                            <img class="img-fluid mx-auto mb-4" src="images/icons/job-01.svg" alt="">
+                            <p>Современное предприятие, отвечающее всем стандартам производственных технологий</p>
+                        </div>
+                        <div class="col text-center">
+                            <img class="img-fluid mx-auto mb-4" src="images/icons/job-02.svg" alt="">
+                            <p>Один из крупнейших холдингов в сегменте ХБИ</p>
+                        </div>
+                        <div class="col text-center">
+                            <img class="img-fluid mx-auto mb-4" src="images/icons/job-03.svg" alt="">
+                            <p>25 лет на рынке</p>
+                        </div>
+                        <div class="col text-center">
+                            <img class="img-fluid mx-auto mb-4" src="images/icons/job-04.svg" alt="">
+                            <p>5000 сотрудников</p>
+                        </div>
+                        <div class="col text-center">
+                            <img class="img-fluid mx-auto mb-4" src="images/icons/job-05.svg" alt="">
+                            <p>Наша продукция продаётся во всех регионах РФ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slider -->
+        <section class="section">
+            <div class="container">
+                <div class="mb-25">
+                    <div class="row g-4">
+                        <div class="col-lg-8">
+                            <h2 class="ff-title mb-0">Твое будущее рабочее место</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper jobSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a class="d-block hover-shine" href="#">
+                                <img class="img-fluid w-100" src="images/slide-609-1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="d-block hover-shine" href="#">
+                                <img class="img-fluid w-100" src="images/slide-609-1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="d-block hover-shine" href="#">
+                                <img class="img-fluid w-100" src="images/slide-609-1.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Director -->
+        <section class="section">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-6 order-lg-2">
+                        <img class="img-fluid" src="images/director-01.png" alt="">
+                    </div>
+                    <div class="col-lg-6 order-lg-1 text-lg-end pt-lg-5">
+                        <i class="icon icon-bread fz-34"></i>
+                        <p class="fz-17">Мы создали 40 000 рабочих мест, обеспечив работой людей из 28 регионов нашей страны.</p>
+                    </div>
+                    <div class="col-lg-12 order-lg-3">
+                        <div class="fz-17">
+                            <p>С 1997 года мы производим муку и хлеб. ГК «ГрейнХолдинг» сегодня – это крупнейший представитель сегмента ХБИ, который производит более 200 тонн хлебобулочных изделий в сутки, а также имеет возможность хранения более 300 тысяч тонн зерна. Наш мукомольный комплекс располагает самой большой мельницей не только в России, но и в Европе.</p>
+                            <p>В нашей компании у вас есть реальная возможность получить бесценный опыт работы и совершить карьерный рост.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Вакансии -->
+        <section class="section">
+            <div class="container">
+                <div class="mb-25">
+                    <div class="row g-4">
+                        <div class="col-lg-8">
+                            <h2 class="ff-title mb-0">Актуальные вакансии</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="job-wrap py-4">
+                    <div class="job-category">
+                        <div class="mb-5">
+                            <a class="link-underline collapsed" href="#job-collapse-01" data-bs-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="job-collapse-01">
+                                <span>Автомобильный бизнес</span> <span>6</span>
+                            </a>
+                        </div>
+                        <div class="collapse job-list px-3 ps-lg-5" id="job-collapse-01">
+                            <!-- vakancy -->
+                            <div class="job-item border-1 border-bottom">
+                                <div class="row g-4">
+                                    <div class="col-lg-6">
+                                        <p class="ff-title fz-17">Младший менеджер по продажам</p>
+                                        <p>Грейн Холдинг, Управляющая компания, 16 февраля</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p class="fz-12">з/п не указана</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p class="fz-12">Москва</p>
+                                        <p class="fz-12">Царицыно</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- vakancy -->
+                            <div class="job-item border-1 border-bottom">
+                                <div class="row g-4">
+                                    <div class="col-lg-6">
+                                        <p class="ff-title fz-17">Менеджер по продажам (Мука)</p>
+                                        <p>Грейн Холдинг, Управляющая компания, 16 февраля</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p class="fz-12">от 40 000 до 70 000 руб.</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p class="fz-12">Подольск</p>
+                                        <p class="fz-12">(Московская область)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- vakancy -->
+                            <div class="job-item border-1 border-bottom">
+                                <div class="row g-4">
+                                    <div class="col-lg-6">
+                                        <p class="ff-title fz-17">Менеджер по продажам (Мука)</p>
+                                        <p>Грейн Холдинг, Управляющая компания, 16 февраля</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p class="fz-12">от 40 000 до 70 000 руб.</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p class="fz-12">Климовск</p>
+                                        <p class="fz-12">(Московская область)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- vakancy -->
+                            <div class="job-item border-1 border-bottom">
+                                <div class="row g-4">
+                                    <div class="col-lg-6">
+                                        <p class="ff-title fz-17">Менеджер по продажам (Мука)</p>
+                                        <p>Грейн Холдинг, Управляющая компания, 16 февраля</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p class="fz-12">от 40 000 до 70 000 руб.</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p class="fz-12">Домодедово</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- vakancy -->
+                            <div class="job-item border-1 border-bottom">
+                                <div class="row g-4">
+                                    <div class="col-lg-6">
+                                        <p class="ff-title fz-17">Управляющий внутренним двором</p>
+                                        <p>Грейн Холдинг, Управляющая компания, 16 февраля</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p class="fz-12">от 55 000 руб.</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p class="fz-12">Рязань</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-category">
+                        <div class="mb-5">
+                            <a class="link-underline collapsed" href="#job-collapse-02" data-bs-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="job-collapse-02">
+                                <span>Административный персонал</span> <span>1</span>
+                            </a>
+                        </div>
+                        <div class="collapse job-list px-3 ps-lg-5" id="job-collapse-02">
+                            <!-- vakancy -->
+                            <div class="job-item border-1 border-bottom">
+                                <div class="row g-4">
+                                    <div class="col-lg-6">
+                                        <p class="ff-title fz-17">Менеджер по продажам (Мука)</p>
+                                        <p>Грейн Холдинг, Управляющая компания, 16 февраля</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p class="fz-12">от 40 000 до 70 000 руб.</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p class="fz-12">Подольск</p>
+                                        <p class="fz-12">(Московская область)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-category">
+                        <div class="mb-5">
+                            <a class="link-underline collapsed" href="#job-collapse-03" data-bs-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="job-collapse-03">
+                                <span>Добыча сырья</span> <span>1</span>
+                            </a>
+                        </div>
+                        <div class="collapse job-list px-3 ps-lg-5" id="job-collapse-03">
+                            <!-- vakancy -->
+                            <div class="job-item border-1 border-bottom">
+                                <div class="row g-4">
+                                    <div class="col-lg-6">
+                                        <p class="ff-title fz-17">Менеджер по продажам (Мука)</p>
+                                        <p>Грейн Холдинг, Управляющая компания, 16 февраля</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p class="fz-12">от 40 000 до 70 000 руб.</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p class="fz-12">Подольск</p>
+                                        <p class="fz-12">(Московская область)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-category">
+                        <div class="mb-5">
+                            <a class="link-underline collapsed" href="#job-collapse-04" data-bs-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="job-collapse-04">
+                                <span>Домашний, обслуживающий персонал</span> <span>1</span>
+                            </a>
+                        </div>
+                        <div class="collapse job-list px-3 ps-lg-5" id="job-collapse-04">
+                            <!-- vakancy -->
+                            <div class="job-item border-1 border-bottom">
+                                <div class="row g-4">
+                                    <div class="col-lg-6">
+                                        <p class="ff-title fz-17">Менеджер по продажам (Мука)</p>
+                                        <p>Грейн Холдинг, Управляющая компания, 16 февраля</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p class="fz-12">от 40 000 до 70 000 руб.</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p class="fz-12">Подольск</p>
+                                        <p class="fz-12">(Московская область)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-category">
+                        <div class="mb-5">
+                            <a class="link-underline collapsed" href="#job-collapse-05" data-bs-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="job-collapse-05">
+                                <span>Маркетинг, реклама, PR</span> <span>1</span>
+                            </a>
+                        </div>
+                        <div class="collapse job-list px-3 ps-lg-5" id="job-collapse-05">
+                            <!-- vakancy -->
+                            <div class="job-item border-1 border-bottom">
+                                <div class="row g-4">
+                                    <div class="col-lg-6">
+                                        <p class="ff-title fz-17">Менеджер по продажам (Мука)</p>
+                                        <p>Грейн Холдинг, Управляющая компания, 16 февраля</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p class="fz-12">от 40 000 до 70 000 руб.</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <p class="fz-12">Подольск</p>
+                                        <p class="fz-12">(Московская область)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="border-1 border-top border-bottom py-4">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-4">
+                        <p class="mb-0">Обратная связь</p>
+                        <p class="ff-title fz-17">Заказать звонок</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <form class="d-flex" action="#" method="post">
+                            <input type="text" class="form-control me-2" placeholder="Номер телефона">
+                            <button type="submit" class="btn btn-primary">
+                                <img src="images/icons/phone-white.svg" alt="">
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <p class="mb-0">Горячая линия:</p>
+                        <p class="ff-title fz-17">
+                            <a href="tel:88002002990">8 800 200 29 90</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-5">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <a class="d-block hover-opacity mb-5" href="#">
+                            <img src="images/logo-footer.svg" alt="IMG-LOGO">
+                        </a>
+                        <div class="row">
+                            <div class="col-6">
+                                <ul class="nav flex-column sidebar-nav">
+                                    <li class="nav-item"><a class="nav-link" href="#">Бренды</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Пресс-центр</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Где купить?</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Партнерам</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <ul class="nav flex-column sidebar-nav">
+                                    <li class="nav-item"><a class="nav-link" href="#">Акции</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Вакансии</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Устойчивое развитие</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-lg-end">
+                        <div class="mb-5">
+                            <div class="row">
+                                <div class="col-lg-6 ms-auto">
+                                    <select class="form-select">
+                                        <option selected="">Подольск</option>
+                                        <option value="1">Москва</option>
+                                        <option value="2">Санкт-Петербург</option>
+                                        <option value="3">Казань</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Московская область, г. Подольск, ул. Лобачева, 19</p>
+                        <p><a href="tel:+74956482949">+7 495 648-29-49</a></p>
+                        <p><a href="mailto:info@grainholding.ru">info@grainholding.ru</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-4">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <p>© 2018 Группа компаний «Грейн Холдинг»</p>
+                        <style>
+                            .startsite {
+                                display: inline-block;
+                                padding-left: 45px;
+                                width: 195px;
+                                height: 35px;
+                                line-height: 18px;
+                                font-size: 14px;
+                                background: url('images/icons/startsite-logo1.svg') left center no-repeat;
+                                background-size: contain;
+                                -webkit-filter: grayscale(100%) brightness(0%) opacity(50%);
+                                filter: grayscale(100%) brightness(0%) opacity(50%);
+                            }
+                        </style>
+                        <a class="startsite" href="https://startsite.studio" target="_blank" rel="noopener">Дизайн и разработка сайта — «СтартСайт»</a>
+                    </div>
+                    <div class="col-lg-6 text-lg-end">
+                        <ul class="nav justify-content-lg-end">
+                            <li class="nav-item hover-opacity">
+                                <a class="nav-link" href="#">
+                                    <img src="images/icons/social-vk.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link hover-opacity" href="#">
+                                    <img src="images/icons/social-youtube.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back Top -->
+    <button type="button" class="btn btn-icon btn-primary back-top" id="back-top">
+        <i class="icon icon-link" style="transform: rotate(-45deg);"></i>
+    </button>
+
+    <!-- Modal Search -->
+    <div class="modal-search js-search-close">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="modal-wrap position-relative">
+                        <button type="button" class="btn-modal-close hover-opacity js-search-close">
+                            <i class="icon icon-x_big"></i>
+                        </button>
+                        <form class="form-search d-flex">
+                            <button type="button" class="hover-opacity">
+                                <i class="icon icon-search"></i>
+                            </button>
+                            <input type="text" name="search" placeholder="Поиск">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+@font-face {
+    font-family: fontello;
+    src: url(fontello.eot);
+    src: url(fontello.eot#iefix) format("embedded-opentype"),
+        url(fontello.woff2) format("woff2"),
+        url(fontello.woff) format("woff"),
+        url(fontello.ttf) format("truetype"),
+        url(fontello.svg#grain) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+[class*=" icon-"]:before,
+[class^=icon-]:before {
+    font-family: fontello;
+    font-style: normal;
+    font-weight: 400;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.icon-bread:before {
+    content: "\E800"
+}
+
+.icon-eye:before {
+    content: "\E801"
+}
+
+.icon-leaf:before {
+    content: "\E802"
+}
+
+.icon-retail:before {
+    content: "\E803"
+}
+
+.icon-wheat:before {
+    content: "\E804"
+}
+
+.icon-molecule:before {
+    content: "\E805"
+}
+
+.icon-search:before {
+    content: "\E806"
+}
+
+.icon-x_big:before {
+    content: "\E807"
+}
+
+.icon-x_small:before {
+    content: "\E808"
+}
+
+.icon-elevator:before {
+    content: "\E809"
+}
+
+.icon-flour:before {
+    content: "\E80A"
+}
+
+.icon-grains:before {
+    content: "\E80B"
+}
+
+.icon-link:before {
+    content: "\E80C"
+}
+
+.icon-vk:before {
+    content: "\E80D"
+}
+
+.icon-facebook:before {
+    content: "\E80E"
+}
+
+.icon-mailru:before {
+    content: "\E80F"
+}
+
+.icon-od:before {
+    content: "\E810"
+}
+
+.icon-twitter:before {
+    content: "\E811"
+}
+
+.icon-inst:before {
+    content: "\E812"
+}
+
+.external-link:after {
+    content: "\E80C";
+    display: inline-block;
+    font-size: .9rem;
+    font-family: fontello, sans-serif;
+    position: relative;
+    left: .6rem;
+    width: 0
+}
