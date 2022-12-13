@@ -1038,9 +1038,9 @@ img {
   color: #b8b8b8;
 }
 
-.products-menu {
+/* .products-menu {
   top: 90px;
-}
+} */
 
 .products-container>*+* {
   margin-top: 30px;

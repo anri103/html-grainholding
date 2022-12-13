@@ -106,6 +106,10 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   const jobSwiper = new Swiper('.jobSwiper', {
+    slidesPerView: 1.5,
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
     autoplay: {
       delay: 3500,
       disableOnInteraction: false,
@@ -117,6 +121,13 @@ document.addEventListener('DOMContentLoaded', function () {
     pagination: {
       el: '.swiper-pagination',
     },
+  });
+
+  var sidebar = new StickySidebar('.js-sidebar', {
+    topSpacing: 0,
+    bottomSpacing: 0,
+    containerSelector: '.js-container',
+    innerWrapperSelector: '.sidebar__inner'
   });
 
 });
