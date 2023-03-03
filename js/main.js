@@ -123,11 +123,4 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 
-  var sidebar = new StickySidebar('.js-sidebar', {
-    topSpacing: 0,
-    bottomSpacing: 0,
-    containerSelector: '.js-container',
-    innerWrapperSelector: '.sidebar__inner'
-  });
-
 });
