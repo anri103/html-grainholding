@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- (c) StartSite Digital Agency | https://startsite.studio/ -->
 <html lang="ru">
 
 <head>
@@ -14,96 +13,365 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body class="home page-template-default page">
 
     <!-- Header -->
-    <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-transparent fixed-top" id="navbar-main">
-            <div class="container">
-
-                <!-- Logo desktop -->
-                <a class="navbar-brand hover-opacity" href="index.html">
-                    <img class="logo-black" src="images/logo_black.svg" alt="">
-                    <img class="logo-white" src="images/logo_white.svg" alt="">
-                </a>
-
-                <!-- Menu toggler -->
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="icon-bar top-bar"></span>
-                    <span class="icon-bar middle-bar"></span>
-                    <span class="icon-bar bottom-bar"></span>
-                </button>
-
-                <!-- Main Menu -->
-                <div class="collapse navbar-collapse" id="main-menu">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="brands.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Бренды</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="brands.html#brand-01">Рязаночка</a>
-                                <a class="dropdown-item" href="brands.html#brand-02">Русский хлеб</a>
+    <!-- Добавляется класс header-transparent -->
+    <header class="header header-transparent">
+        <div class="sticky-wrapper">
+            <div class="menu-area">
+                <div class="container">
+                    <div class="row gx-0 align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <!-- Logo desktop -->
+                             <div class="header-logo">
+                                 <a href="index.html">
+                                     <img class="logo-black" src="images/logo_black.svg" alt="Грейн Холдинг">
+                                     <img class="logo-white" src="images/logo_white.svg" alt="Грейн Холдинг">
+                                 </a>
+                             </div>
+                        </div>
+                        <div class="col-auto ms-auto">
+                            <div class="header-nav">
+                                <!-- Main Menu -->
+                                 <!-- Стандартное меню WP -->
+                                <nav class="main-menu">
+                                    <ul>
+                                        <li class="menu-item-has-children">
+                                            <a href="brands.html">Бренды</a>
+                                            <ul class="sub-menu">
+                                                <li class="">
+                                                    <a href="brands.html#brand-01">Рязаночка</a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="brands.html#brand-02">Русский хлеб</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="">
+                                            <a href="blog.html">Пресс-центр</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="gde-kupit.html">Где купить</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="partners.html">Партнерам</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="akcii.html">Акции</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="razvitie.html">Развитие</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="vakansii.html">Вакансии</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <!-- Buttons -->
+                                <div class="header-btn-group">
+                                    <!-- Search -->
+                                    <button type="button" class="btn btn-search" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch">
+                                        <svg class="svg-icon icon-search" width="24" height="24">
+                                            <use xlink:href="css/sprite.svg#icon-search"></use>
+                                        </svg>
+                                    </button>
+                                    <!-- Mobile menu toggler -->
+                                    <button type="button" class="btn btn-mobile-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMobileMenu">
+                                        <svg class="svg-icon icon-menu" width="24" height="24">
+                                            <use xlink:href="css/sprite.svg#icon-menu"></use>
+                                        </svg>
+                                    </button>
+                                 </div>
                             </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Пресс-центр</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="gde-kupit.html">Где купить</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="partners.html">Партнерам</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="akcii.html">Акции</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="razvitie.html">Развитие</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="vakansii.html">Вакансии</a>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-                    <!-- Search -->
-                    <ul class="nav navbar-icons">
-                        <li class="nav-item">
-                            <a class="nav-link js-search-open" href="#">
-                                <i class="icon icon-search"></i>
+    <!-- Offcanvas Search -->
+    <div class="offcanvasSearch offcanvas offcanvas-top" id="offcanvasSearch" tabindex="-1">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <form action="#" class="form-search">
+                            <input type="text" class="form-control" name="search" placeholder="Поиск по сайту">
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Результаты поиска в товарах -->
+                    <!-- Слово из формы подсвечиваются тегом b -->
+                    <div class="col-md-6">
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-3">
+                                    <a href="#">
+                                        <img class="item-img img-fluid" src="images/products/001.png" alt="IMG-PRODUCT">
+                                    </a>
+                                </div>
+                                <div class="col-9">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">Мука пшеничная <b>хлеб</b>опекарная высшего сорта ТМ «Рязаночка» – это универсальный продукт для любого типа выпечки. Продукт производится на самой большой мельнице</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-3">
+                                    <a href="#">
+                                        <img class="item-img img-fluid" src="images/products/001.png" alt="IMG-PRODUCT">
+                                    </a>
+                                </div>
+                                <div class="col-9">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">Мука пшеничная <b>хлеб</b>опекарная высшего сорта ТМ «Рязаночка» – это универсальный продукт для любого типа выпечки. Продукт производится на самой большой мельнице</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-3">
+                                    <a href="#">
+                                        <img class="item-img img-fluid" src="images/products/001.png" alt="IMG-PRODUCT">
+                                    </a>
+                                </div>
+                                <div class="col-9">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">Мука пшеничная <b>хлеб</b>опекарная высшего сорта ТМ «Рязаночка» – это универсальный продукт для любого типа выпечки. Продукт производится на самой большой мельнице</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Результаты поиска на страницах -->
+                    <!-- Слово из формы подсвечиваются тегом b -->
+                    <div class="col-md-6">
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">
+                                        продукцию на своих площадках. Все желающие могли бесплатно попробовать блинчики с джемом из муки "Рязаночка" и продегустировать <b>хлеб</b> и булочки от "Русского <b>хлеб</b>а" . Для Рязанцев бы организована ярмарка народно-художественных промыслов, с мастер-классами от мастеров
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">
+                                        продукцию на своих площадках. Все желающие могли бесплатно попробовать блинчики с джемом из муки "Рязаночка" и продегустировать <b>хлеб</b> и булочки от "Русского <b>хлеб</b>а" . Для Рязанцев бы организована ярмарка народно-художественных промыслов, с мастер-классами от мастеров
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">
+                                        продукцию на своих площадках. Все желающие могли бесплатно попробовать блинчики с джемом из муки "Рязаночка" и продегустировать <b>хлеб</b> и булочки от "Русского <b>хлеб</b>а" . Для Рязанцев бы организована ярмарка народно-художественных промыслов, с мастер-классами от мастеров
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">
+                                        продукцию на своих площадках. Все желающие могли бесплатно попробовать блинчики с джемом из муки "Рязаночка" и продегустировать <b>хлеб</b> и булочки от "Русского <b>хлеб</b>а" . Для Рязанцев бы организована ярмарка народно-художественных промыслов, с мастер-классами от мастеров
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">
+                                        продукцию на своих площадках. Все желающие могли бесплатно попробовать блинчики с джемом из муки "Рязаночка" и продегустировать <b>хлеб</b> и булочки от "Русского <b>хлеб</b>а" . Для Рязанцев бы организована ярмарка народно-художественных промыслов, с мастер-классами от мастеров
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">
+                                        продукцию на своих площадках. Все желающие могли бесплатно попробовать блинчики с джемом из муки "Рязаночка" и продегустировать <b>хлеб</b> и булочки от "Русского <b>хлеб</b>а" . Для Рязанцев бы организована ярмарка народно-художественных промыслов, с мастер-классами от мастеров
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">
+                                        продукцию на своих площадках. Все желающие могли бесплатно попробовать блинчики с джемом из муки "Рязаночка" и продегустировать <b>хлеб</b> и булочки от "Русского <b>хлеб</b>а" . Для Рязанцев бы организована ярмарка народно-художественных промыслов, с мастер-классами от мастеров
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Offcanvas Mobile Menu -->
+    <div class="offcanvasMobileMenu offcanvas offcanvas-end" id="offcanvasMobileMenu" tabindex="-1">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Mobile Menu -->
+            <nav class="mobile-menu">
+                <ul>
+                    <li class="menu-item-has-children">
+                        <a href="brands.html">Бренды</a>
+                        <button type="button" class="btn btn-dropdown">
+                            <svg class="svg-icon icon-chevron-down" width="16" height="16">
+                                <use xlink:href="css/sprite.svg#icon-chevron-down"></use>
+                            </svg>
+                        </button>
+                        <ul class="sub-menu">
+                            <li class="">
+                                <a href="brands.html#brand-01">Рязаночка</a>
+                            </li>
+                            <li class="">
+                                <a href="brands.html#brand-02">Русский хлеб</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="blog.html">Пресс-центр</a>
+                    </li>
+                    <li class="">
+                        <a href="gde-kupit.html">Где купить</a>
+                    </li>
+                    <li class="">
+                        <a href="partners.html">Партнерам</a>
+                    </li>
+                    <li class="">
+                        <a href="akcii.html">Акции</a>
+                    </li>
+                    <li class="">
+                        <a href="razvitie.html">Развитие</a>
+                    </li>
+                    <li class="">
+                        <a href="vakansii.html">Вакансии</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="offcanvas-footer">
+            <div class="d-flex flex-column gap-3">
+                <!-- Hot phone -->
+                <div class="custom-html-widget">
+                    <p class="mb-0">Горячая линия:</p>
+                    <p class="ff-title fs-4 mb-0">
+                        <a href="tel:88002002990">8 800 200 29 90</a>
+                    </p>
+                </div>
+                <!-- Social icons -->
+                <div class="custom-html-widget">
+                    <ul class="social-menu">
+                        <li>
+                            <a href="#">
+                                <svg class="svg-icon social-facebook" width="12" height="20">
+                                    <use xlink:href="css/sprite.svg#social-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="svg-icon social-insta" width="20" height="20">
+                                    <use xlink:href="css/sprite.svg#social-insta"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="svg-icon social-twitter" width="22" height="19">
+                                    <use xlink:href="css/sprite.svg#social-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="svg-icon social-vk" width="24" height="16">
+                                    <use xlink:href="css/sprite.svg#social-vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="svg-icon social-youtube" width="22" height="16">
+                                    <use xlink:href="css/sprite.svg#social-youtube"></use>
+                                </svg>
                             </a>
                         </li>
                     </ul>
                 </div>
-
             </div>
-        </nav>
-    </header>
+        </div>
+    </div>
 
     <main class="main">
 
-        <!-- Title -->
-        <section class="section position-relative d-flex align-items-center vh-100 color-white bg-img" style="background-image: url(images/bg-hero.jpg);">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-10">
-                        <div class="position-relative z-index-1 text-center">
-                            <h1 class="ff-title">“ГрейнХолдинг” - лидер на рынке муки и готового хлеба в России</h1>
-                        </div>
-                    </div>
+        <!-- Hero video -->
+        <section class="section section-hero-video" style="background-image: url(images/bg-hero.jpg);">
+            <div class="bg-video">
+                <video class="video" autoplay loop muted>
+                    <source type="video/webm" src="images/video/video-1.webm">
+                    <source type="video/mp4" src="images/video/video-1.mp4">
+                    <source type="video/ogv" src="images/video/video-1.ogv">
+                </video>
+            </div>
+            <img class="overlay-border-bottom" src="images/border-01.png" alt="">
+            <div class="hero-heading">
+                <div class="container">
+                    <h1>“ГрейнХолдинг” - лидер на рынке муки и готового хлеба в России</h1>
                 </div>
             </div>
-            <img class="position-absolute bottom-0 w-100" src="images/border-01.png" alt="">
         </section>
 
-        <!-- Производство -->
-        <section class="section overflow-hidden">
+        <!-- Our features -->
+        <section class="section section-our-features">
             <div class="container">
                 <!-- Title -->
-                <div class="mb-25">
-                    <div class="row g-4">
-                        <div class="col-lg-8">
-                            <h2 class="ff-title mb-0">Производство</h2>
-                        </div>
-                    </div>
+                <div class="section-heading">
+                    <h2 class="section-title">Производство</h2>
                 </div>
 
                 <div class="py-4">
@@ -111,22 +379,30 @@
                         <div class="col-6 text-end">
                             <div class="row">
                                 <div class="col-md-8 ms-auto">
-                                    <i class="icon icon-wheat fz-34"></i>
-                                    <p class="fz-15">Мы наладили полный цикл собственного производства муки и хлеба и осуществляем непрерывный контроль качества сырья и продукции на всех этапах до приобретения конечным покупателем.</p>
+                                    <div class="icon-feature-production">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="58" height="59" viewBox="0 0 58 59" fill="none">
+                                            <path d="M11.3105 31.208C10.8078 29.6227 10.3825 28.25 10.0345 27.09C9.76383 26.0847 9.5705 25.234 9.4545 24.538C9.37717 23.9967 9.3385 23.552 9.3385 23.204C9.3385 22.972 9.37717 22.798 9.4545 22.682L9.5125 22.624C8.89383 22.8947 8.04317 23.726 6.9605 25.118C5.76183 26.626 4.77583 28.2693 4.0025 30.048C3.0745 32.1747 2.6105 34.1273 2.6105 35.906C2.6105 38.0327 3.3065 39.7533 4.6985 41.068C5.3945 41.7253 6.2645 42.0347 7.3085 41.996C8.39117 41.9187 9.35783 41.474 10.2085 40.662C11.1365 39.7727 11.7358 38.5933 12.0065 37.124C12.2772 35.384 12.0452 33.3927 11.3105 31.15V31.208ZM21.5765 20.768C21.0352 19.1827 20.6098 17.7907 20.3005 16.592C20.0298 15.5867 19.8365 14.736 19.7205 14.04C19.6045 13.4987 19.5465 13.0733 19.5465 12.764C19.5465 12.532 19.5852 12.358 19.6625 12.242L19.7205 12.184C19.1018 12.4547 18.2512 13.286 17.1685 14.678C15.9698 16.186 14.9838 17.8293 14.2105 19.608C13.2825 21.7347 12.8185 23.6873 12.8185 25.466C12.8185 27.5927 13.5145 29.3327 14.9065 30.686C15.6025 31.3433 16.4918 31.6333 17.5745 31.556C18.6572 31.4787 19.6238 31.034 20.4745 30.222C21.4025 29.3327 22.0018 28.1533 22.2725 26.684C22.5432 24.944 22.2918 22.972 21.5185 20.768H21.5765ZM32.4805 9.806C31.9392 8.22067 31.5138 6.848 31.2045 5.688C30.9338 4.68266 30.7405 3.832 30.6245 3.136C30.5085 2.59467 30.4505 2.15 30.4505 1.802C30.4505 1.57 30.4892 1.396 30.5665 1.28L30.6245 1.222C30.0058 1.49266 29.1552 2.324 28.0725 3.716C26.8738 5.224 25.8878 6.86733 25.1145 8.646C24.1865 10.7727 23.7418 12.7253 23.7805 14.504C23.7805 16.6307 24.4765 18.3513 25.8685 19.666C26.5258 20.3233 27.3765 20.6327 28.4205 20.594C29.5032 20.5167 30.4892 20.072 31.3785 19.26C32.3065 18.3707 32.9058 17.1913 33.1765 15.722C33.4472 13.982 33.2152 11.9907 32.4805 9.748V9.806ZM17.5745 48.26C18.9278 49.5747 20.6678 50.1933 22.7945 50.116C24.5732 50.0773 26.5065 49.5553 28.5945 48.55C30.3345 47.6993 31.9585 46.6553 33.4665 45.418C34.8198 44.2967 35.6318 43.4073 35.9025 42.75L35.8445 42.808C35.7285 42.8853 35.5545 42.924 35.3225 42.924C35.0132 42.9627 34.5878 42.9433 34.0465 42.866C33.3505 42.75 32.4998 42.576 31.4945 42.344C30.2958 42.0733 28.8845 41.706 27.2605 41.242C25.0178 40.5847 23.0265 40.43 21.2865 40.778C19.8172 41.0873 18.6572 41.7253 17.8065 42.692C17.0332 43.5813 16.6272 44.5673 16.5885 45.65C16.5498 46.7327 16.8785 47.6027 17.5745 48.26ZM26.1005 38.11C27.4538 39.4247 29.1938 40.0627 31.3205 40.024C33.0992 39.9467 35.0518 39.4053 37.1785 38.4C38.9185 37.5493 40.5425 36.5053 42.0505 35.268C43.4038 34.1853 44.1965 33.3153 44.4285 32.658L44.3705 32.716C44.2545 32.7933 44.0805 32.832 43.8485 32.832C43.5392 32.8707 43.1138 32.8513 42.5725 32.774C41.8765 32.658 41.0258 32.484 40.0205 32.252C38.8218 31.9427 37.4105 31.556 35.7865 31.092C33.5052 30.4347 31.5138 30.28 29.8125 30.628C28.3432 30.9373 27.1832 31.5947 26.3325 32.6C25.5592 33.4507 25.1532 34.4173 25.1145 35.5C25.0758 36.5827 25.4045 37.4527 26.1005 38.11ZM35.7285 27.612C37.1205 28.9267 38.9185 29.4873 41.1225 29.294C42.9785 29.178 45.0472 28.54 47.3285 27.38C49.1845 26.4133 50.9052 25.2533 52.4905 23.9C53.9598 22.7013 54.8105 21.7733 55.0425 21.116L54.8685 21.29C54.6752 21.4447 54.4238 21.58 54.1145 21.696C53.6892 21.812 53.1478 21.87 52.4905 21.87C51.7172 21.87 50.7892 21.7927 49.7065 21.638C48.4305 21.406 46.9998 21.058 45.4145 20.594C43.1718 19.9367 41.1805 19.782 39.4405 20.13C37.9712 20.4393 36.8112 21.0773 35.9605 22.044C35.1872 22.9333 34.7812 23.9193 34.7425 25.002C34.7038 26.0847 35.0325 26.9547 35.7285 27.612ZM40.3685 14.562C41.5672 16.0313 42.9592 16.5727 44.5445 16.186C45.8978 15.838 47.3672 14.8133 48.9525 13.112C50.2285 11.7587 51.5625 10.0187 52.9545 7.892C53.9598 6.34533 54.9458 4.68266 55.9125 2.904L57.0145 0.699999C56.1638 0.777331 54.6752 1.164 52.5485 1.86C49.8418 2.71066 47.4832 3.67733 45.4725 4.76C42.8045 6.152 40.9872 7.58267 40.0205 9.052C38.8218 10.908 38.9378 12.7447 40.3685 14.562ZM0.8125 56.67C0.8125 56.7087 0.851167 56.6507 0.9285 56.496C2.01117 54.4853 3.55783 52.088 5.5685 49.304C9.43517 44.0067 14.4618 38.11 20.6485 31.614C23.7032 28.4047 26.5645 25.5627 29.2325 23.088C31.4752 21 33.5438 19.2213 35.4385 17.752C36.9465 16.5147 38.3192 15.5093 39.5565 14.736C40.4458 14.1947 41.2192 13.7887 41.8765 13.518L42.5725 13.228L36.6565 19.318C32.0165 24.1513 27.9178 28.54 24.3605 32.484C19.3725 38.0133 15.8538 42.2473 13.8045 45.186C12.1032 47.5833 10.6338 49.768 9.3965 51.74C8.42983 53.2867 7.5985 54.6593 6.9025 55.858C6.4385 56.7473 6.07117 57.482 5.8005 58.062L5.5685 58.7L0.8125 56.67Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <p class="fs-4">Мы наладили полный цикл собственного производства муки и хлеба и осуществляем непрерывный контроль качества сырья и продукции на всех этапах до приобретения конечным покупателем.</p>
                                 </div>
                             </div>
                             <div class="img-mask-1">
-                                <img src="images/prod-02.png" alt="IMG">
+                                <img class="img-fluid" src="images/prod-02.png" alt="IMG">
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="img-mask-2">
-                                <img src="images/prod-01.png" alt="IMG">
+                                <img class="img-fluid" src="images/prod-01.png" alt="IMG">
                             </div>
                             <div class="row">
                                 <div class="col-md-8">
-                                    <i class="icon icon-flour fz-34"></i>
-                                    <p class="fz-15">Производим муку "Рязаночка" на самой инновационной мельнице России.</p>
+                                    <div class="icon-feature-production">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="59" viewBox="0 0 48 59" fill="none">
+                                            <path d="M18.838 32.542C18.4513 31.846 18.1613 31.2853 17.968 30.86C17.852 30.5893 17.794 30.3767 17.794 30.222V30.106C17.5233 30.2993 17.2527 30.7633 16.982 31.498C16.634 32.3487 16.46 33.1413 16.46 33.876C16.4987 34.804 16.8273 35.4613 17.446 35.848C17.7553 36.08 18.1227 36.0993 18.548 35.906C18.9733 35.674 19.244 35.2873 19.36 34.746C19.476 34.0887 19.302 33.354 18.838 32.542ZM21.274 28.888C20.8873 28.192 20.5973 27.6507 20.404 27.264C20.288 26.9547 20.23 26.742 20.23 26.626L20.288 26.51C20.0173 26.6647 19.7273 27.1093 19.418 27.844C19.07 28.6947 18.896 29.4873 18.896 30.222C18.9347 31.15 19.2633 31.8073 19.882 32.194C20.1913 32.426 20.5587 32.4453 20.984 32.252C21.4093 32.02 21.68 31.6333 21.796 31.092C21.912 30.4347 21.7573 29.7 21.332 28.888H21.274ZM23.942 25.118C23.5553 24.422 23.2653 23.8613 23.072 23.436C22.956 23.1653 22.898 22.9527 22.898 22.798V22.682C22.6273 22.8367 22.3373 23.2813 22.028 24.016C21.68 24.8667 21.506 25.6593 21.506 26.394C21.5447 27.322 21.8733 27.9987 22.492 28.424C22.84 28.6173 23.2267 28.6173 23.652 28.424C24.0773 28.192 24.3287 27.8053 24.406 27.264C24.5607 26.6453 24.406 25.93 23.942 25.118ZM21.68 37.24C22.2987 37.6267 23.0333 37.646 23.884 37.298C24.5413 37.0273 25.1987 36.5633 25.856 35.906C26.436 35.326 26.7453 34.8813 26.784 34.572L26.668 34.63C26.552 34.6687 26.32 34.688 25.972 34.688C25.508 34.688 24.8893 34.6493 24.116 34.572C23.188 34.4947 22.4533 34.63 21.912 34.978C21.4867 35.2873 21.2547 35.6933 21.216 36.196C21.1773 36.66 21.3127 36.9887 21.622 37.182L21.68 37.24ZM23.594 33.76C24.2127 34.1853 24.9667 34.224 25.856 33.876C26.5133 33.5667 27.1707 33.0833 27.828 32.426C28.408 31.846 28.7173 31.4207 28.756 31.15L28.64 31.208C28.524 31.2467 28.292 31.266 27.944 31.266C27.48 31.266 26.8613 31.2273 26.088 31.15C25.16 31.0727 24.4253 31.208 23.884 31.556C23.4587 31.8653 23.2267 32.2713 23.188 32.774C23.1493 33.238 23.2847 33.5667 23.594 33.76ZM25.914 30.106C26.5327 30.5313 27.2867 30.5313 28.176 30.106C28.9107 29.7967 29.6067 29.2747 30.264 28.54C30.8827 27.9213 31.2113 27.4573 31.25 27.148L31.076 27.322C30.9213 27.438 30.67 27.5153 30.322 27.554C29.8193 27.6313 29.162 27.6313 28.35 27.554C27.422 27.4767 26.6873 27.612 26.146 27.96C25.7207 28.2693 25.4887 28.6753 25.45 29.178C25.4113 29.642 25.566 29.9707 25.914 30.164V30.106ZM26.552 26.046C27.0933 26.51 27.6347 26.5293 28.176 26.104C28.6013 25.756 29.046 25.1567 29.51 24.306C29.7807 23.6487 30.0707 22.914 30.38 22.102L30.67 21C30.2447 21.1547 29.6067 21.4833 28.756 21.986C27.6733 22.6433 26.9 23.2813 26.436 23.9C25.8173 24.7507 25.856 25.466 26.552 26.046ZM17.156 40.662C17.156 40.662 17.1753 40.6427 17.214 40.604C17.8713 38.4773 19.3407 35.6547 21.622 32.136C22.5113 30.7827 23.3427 29.6033 24.116 28.598C24.7347 27.786 25.3147 27.1093 25.856 26.568C26.204 26.22 26.5327 25.93 26.842 25.698L27.132 25.524L24.29 29.816C22.2793 32.9093 20.9647 35.152 20.346 36.544C19.6887 37.7813 19.128 39.27 18.664 41.01L17.156 40.662ZM45.924 29.642C45.924 26.4327 45.8273 23.494 45.634 20.826C45.4407 18.6993 45.2087 16.7853 44.938 15.084C44.706 13.8467 44.4547 12.8027 44.184 11.952L43.894 10.966L44.532 10.096C44.996 9.32267 45.4213 8.53 45.808 7.718C46.3493 6.59667 46.7553 5.514 47.026 4.47C47.374 3.11666 47.49 1.86 47.374 0.699999L46.62 0.641999C45.924 0.641999 45.1893 0.680666 44.416 0.757998C43.256 0.912665 42.0573 1.14467 40.82 1.454C39.2733 1.84067 37.6687 2.382 36.006 3.078L24 3.194L11.994 3.078C10.3313 2.382 8.72667 1.84067 7.18 1.454C5.904 1.14467 4.70533 0.912665 3.584 0.757998C2.772 0.680666 2.03733 0.641999 1.38 0.641999L0.626 0.699999C0.51 1.86 0.606667 3.11666 0.916 4.47C1.18667 5.514 1.59267 6.59667 2.134 7.718C2.482 8.53 2.90733 9.32267 3.41 10.096L3.99 10.966L3.7 11.952C3.42933 12.8027 3.19733 13.8467 3.004 15.084C2.69467 16.7853 2.44333 18.6993 2.25 20.826C2.05667 23.494 1.96 26.4327 1.96 29.642C1.96 32.9673 2.05667 35.964 2.25 38.632C2.44333 40.7973 2.69467 42.7113 3.004 44.374C3.19733 45.5727 3.42933 46.5973 3.7 47.448L3.99 48.318L3.41 49.188C2.90733 49.9613 2.482 50.754 2.134 51.566C1.59267 52.6873 1.18667 53.7893 0.916 54.872C0.606667 56.1867 0.51 57.424 0.626 58.584L1.38 58.642C2.03733 58.642 2.772 58.6033 3.584 58.526C4.70533 58.3713 5.904 58.1393 7.18 57.83C8.72667 57.4433 10.3313 56.902 11.994 56.206L24 56.148L36.006 56.206C37.6687 56.902 39.2733 57.4433 40.82 57.83C42.0573 58.178 43.256 58.41 44.416 58.526C45.1893 58.6033 45.924 58.642 46.62 58.642L47.374 58.584C47.49 57.424 47.374 56.1867 47.026 54.872C46.7553 53.7893 46.3687 52.6873 45.866 51.566C45.4793 50.754 45.0347 49.9613 44.532 49.188L43.952 48.318L44.242 47.448C44.5127 46.5973 44.7447 45.5727 44.938 44.374C45.2087 42.7113 45.4407 40.7973 45.634 38.632C45.8273 35.964 45.924 32.9673 45.924 29.642ZM24 44.722C21.2933 44.6833 18.78 43.968 16.46 42.576C14.1787 41.184 12.3807 39.328 11.066 37.008C9.75133 34.688 9.094 32.1747 9.094 29.468C9.13267 26.7227 9.848 24.2093 11.24 21.928C12.632 19.608 14.488 17.7907 16.808 16.476C19.128 15.1613 21.6413 14.5233 24.348 14.562C27.0933 14.6007 29.5873 15.2967 31.83 16.65C34.1113 18.0033 35.9093 19.84 37.224 22.16C38.5773 24.4413 39.254 26.9547 39.254 29.7C39.254 32.4067 38.558 34.92 37.166 37.24C35.8127 39.56 33.976 41.3967 31.656 42.75C29.336 44.0647 26.8033 44.722 24.058 44.722H24Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <p class="fs-4">Производим муку "Рязаночка" на самой инновационной мельнице России.</p>
                                 </div>
                             </div>
                         </div>
@@ -134,12 +410,8 @@
                 </div>
 
                 <div class="py-4">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="img-mask-3">
-                                <img src="images/prod-03.png" alt="IMG">
-                            </div>
-                        </div>
+                    <div class="img-mask-3">
+                        <img class="img-fluid" src="images/prod-03.png" alt="IMG">
                     </div>
                 </div>
 
@@ -148,20 +420,28 @@
                         <div class="col-6 text-end">
                             <div class="row">
                                 <div class="col-md-8 ms-auto">
-                                    <i class="icon icon-bread color-xl-white fz-34"></i>
-                                    <p class="fz-15 color-xl-white">Выпекаем 250 тонн хлебобулочных изделий в сутки на 5 собственных хлебозаводах.</p>
+                                    <div class="icon-feature-production color-xl-white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="67" height="59" viewBox="0 0 67 59" fill="none">
+                                            <path d="M52.954 29.584C53.2247 31.1307 53.418 32.6967 53.534 34.282C53.6113 37.066 53.3407 39.8307 52.722 42.576C51.8713 38.3613 50.7693 34.572 49.416 31.208C48.7587 29.5453 48.1787 28.308 47.676 27.496C44.0027 26.4907 40.2713 25.8333 36.482 25.524H34.742L35.148 27.09C36.308 32.3487 36.4047 37.6267 35.438 42.924C34.0847 37.124 31.9193 31.6527 28.942 26.51L28.42 25.64C24.6307 26.0653 20.9573 26.9933 17.4 28.424C18.5213 33.2187 18.4247 37.9747 17.11 42.692C16.3753 38.3227 14.9447 34.2047 12.818 30.338C11.9673 30.7247 11.426 30.9953 11.194 31.15C7.44333 33.238 4.62067 35.5967 2.726 38.226C0.908667 40.7007 0 43.2913 0 45.998C0 49.594 1.508 52.378 4.524 54.35C7.15333 56.09 11.1167 57.2887 16.414 57.946C20.4353 58.4487 26.0033 58.7 33.118 58.7C40.2327 58.7 45.8007 58.4487 49.822 57.946C55.1193 57.2887 59.0827 56.09 61.712 54.35C64.728 52.378 66.236 49.594 66.236 45.998C66.236 43.4847 65.4047 41.0487 63.742 38.69C61.9633 36.1767 59.1987 33.6633 55.448 31.15L52.954 29.584ZM34.278 0.699999C33.8527 1.89866 33.6013 3.11666 33.524 4.354C33.524 4.702 33.6787 5.14666 33.988 5.688C34.1813 5.99733 34.5293 6.53866 35.032 7.312C35.5347 8.04667 35.902 8.60733 36.134 8.994C36.5207 9.61266 36.7527 10.154 36.83 10.618C37.0233 11.8553 36.9267 13.0733 36.54 14.272C36.192 15.4707 35.612 16.5533 34.8 17.52C34.9933 16.0507 34.742 14.6587 34.046 13.344C33.814 12.9187 33.4467 12.3193 32.944 11.546C32.2867 10.5793 31.842 9.82533 31.61 9.284C31.1847 8.39467 30.972 7.486 30.972 6.558C30.972 5.59133 31.262 4.62466 31.842 3.658C32.2287 2.92333 32.7507 2.208 33.408 1.512L34.278 0.699999ZM29.174 11.836C28.942 12.4933 28.8067 13.1893 28.768 13.924C28.768 14.2333 29.058 14.8327 29.638 15.722C30.218 16.5727 30.5467 17.1913 30.624 17.578C30.74 18.274 30.682 18.97 30.45 19.666C30.2567 20.362 29.928 20.9807 29.464 21.522C29.58 20.6713 29.4447 19.8593 29.058 19.086C28.942 18.854 28.7487 18.5447 28.478 18.158C28.0527 17.6167 27.7627 17.172 27.608 16.824C27.376 16.2827 27.26 15.722 27.26 15.142C27.4533 13.7887 28.0913 12.6867 29.174 11.836Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <p class="fs-4 color-xl-white">Выпекаем 250 тонн хлебобулочных изделий в сутки на 5 собственных хлебозаводах.</p>
                                 </div>
                             </div>
                         </div>
     
                         <div class="col-6">
                             <div class="img-mask-2">
-                                <img src="images/prod-04.png" alt="IMG">
+                                <img class="img-fluid" src="images/prod-04.png" alt="IMG">
                             </div>
                             <div class="row">
                                 <div class="col-md-8">
-                                    <i class="icon icon-elevator fz-34"></i>
-                                    <p class="fz-15">Наличие собственного современного автопарка позволяет своевременно доставлять продукцию в любых объёмах пищевым компаниям и розничным сетям, оптимизируя логистику индивидуально под каждого партнера.</p>
+                                    <div class="icon-feature-production">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="59" viewBox="0 0 50 59" fill="none">
+                                            <path d="M22.274 19.202V18.158L23.144 17.694L29.698 13.982V9.69L14.908 0.699999L0.06 9.69V58.7H22.274V19.202ZM36.948 11.894L24.014 19.144V58.7H49.94V19.202L36.948 11.894ZM36.136 31.672V31.788C36.1747 31.9427 36.252 32.1553 36.368 32.426C36.5227 32.774 36.7547 33.1993 37.064 33.702C37.4507 34.398 37.586 35.0167 37.47 35.558C37.354 36.022 37.122 36.3507 36.774 36.544C36.426 36.7373 36.1167 36.7373 35.846 36.544C35.3047 36.196 35.0147 35.6353 34.976 34.862C34.976 34.2047 35.1113 33.528 35.382 32.832C35.6527 32.1747 35.904 31.7687 36.136 31.614V31.672ZM33.874 34.92V35.094C33.9127 35.2487 33.99 35.442 34.106 35.674C34.2607 36.0607 34.4927 36.5053 34.802 37.008C35.1887 37.704 35.324 38.3227 35.208 38.864C35.1307 39.328 34.8987 39.6567 34.512 39.85C34.164 40.0433 33.8547 40.0433 33.584 39.85C33.0427 39.502 32.7527 38.9413 32.714 38.168C32.714 37.5107 32.8493 36.834 33.12 36.138C33.3907 35.4807 33.642 35.0747 33.874 34.92ZM31.786 38.052L31.902 38.458C32.018 38.8447 32.2693 39.4053 32.656 40.14C33.0813 40.836 33.236 41.4547 33.12 41.996C33.0427 42.46 32.8107 42.7887 32.424 42.982C32.076 43.1367 31.7667 43.1173 31.496 42.924C30.916 42.576 30.626 42.0153 30.626 41.242C30.5873 40.6233 30.7227 39.9467 31.032 39.212C31.3027 38.5933 31.554 38.2067 31.786 38.052ZM32.54 47.332L31.264 47.042C31.264 47.042 31.264 47.0227 31.264 46.984C31.844 45.1667 33.12 42.7693 35.092 39.792C36.2907 37.7813 37.6827 36.022 39.268 34.514C38.7267 34.0113 38.7267 33.412 39.268 32.716C39.6933 32.1747 40.37 31.6333 41.298 31.092C41.994 30.6667 42.516 30.396 42.864 30.28L42.4 31.73C42.0133 32.774 41.6073 33.5667 41.182 34.108C40.602 34.8427 40.022 35.0167 39.442 34.63C37.5087 37.4527 35.6913 40.43 33.99 43.562C33.41 44.6833 32.9267 45.94 32.54 47.332ZM35.092 44.142C34.8213 43.9487 34.7053 43.6587 34.744 43.272C34.7827 42.8467 34.9953 42.4987 35.382 42.228C35.8073 41.9187 36.426 41.8027 37.238 41.88C38.398 41.996 39.152 41.996 39.5 41.88H39.558C39.4807 42.1507 39.21 42.518 38.746 42.982C38.166 43.562 37.586 43.968 37.006 44.2C36.2713 44.5093 35.6333 44.49 35.092 44.142ZM36.774 41.184C36.5033 40.9907 36.3873 40.7007 36.426 40.314C36.4647 39.8887 36.6773 39.5407 37.064 39.27C37.4893 38.9607 38.108 38.8447 38.92 38.922C39.5387 38.9993 40.0413 39.038 40.428 39.038C40.6987 39.038 40.9113 39.0187 41.066 38.98L41.182 38.922C41.1433 39.1927 40.8727 39.56 40.37 40.024C39.8287 40.604 39.268 41.01 38.688 41.242C37.9533 41.5513 37.3153 41.532 36.774 41.184ZM38.746 38.052C38.4753 37.8587 38.34 37.5687 38.34 37.182C38.3787 36.7567 38.5913 36.428 38.978 36.196C39.442 35.8867 40.08 35.7707 40.892 35.848C41.588 35.9253 42.1487 35.9253 42.574 35.848C42.8833 35.8093 43.1153 35.732 43.27 35.616L43.386 35.5C43.3087 35.7707 43.0187 36.1767 42.516 36.718C41.8973 37.3367 41.2787 37.7813 40.66 38.052C39.9253 38.4 39.2873 38.4 38.746 38.052Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <p class="fs-4">Наличие собственного современного автопарка позволяет своевременно доставлять продукцию в любых объёмах пищевым компаниям и розничным сетям, оптимизируя логистику индивидуально под каждого партнера.</p>
                                 </div>
                             </div>
     
@@ -172,49 +452,47 @@
             </div>
         </section>
 
-        <!-- Наши бренды -->
-        <section class="section">
+        <!-- Big brands -->
+        <section class="section section-big-brands">
             <div class="container">
                 <!-- Title -->
-                <div class="mb-25">
-                    <div class="row g-4">
-                        <div class="col-lg-8">
-                            <h2 class="ff-title mb-0">Наши бренды</h2>
+                <div class="section-heading">
+                    <h2 class="section-title">
+                        <a href="brands.html">Бренды</a>
+                        <svg class="svg-icon title-link-arrow" width="39" height="40">
+                            <use xlink:href="css/sprite.svg#title-link-arrow"></use>
+                        </svg>
+                    </h2>
+                </div>
+                <div class="section-text">
+                    <p class="fs-5">Группа компаний «ГрейнХолдинг» включает в себя бренды «Рязаночка» и «Русский хлеб» - торговые марки, прочно зарекомендовавшие себя на рынке.</p>
+                </div>
+                <div class="row gy-4">
+                    <div class="col-md-6">
+                        <div class="card card-big-brand">
+                            <div class="card-img-wrapper">
+                                <a href="#">
+                                    <img class="card-img" src="images/brand-01.png" alt="Рязаночка">
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <p class="h2 card-title">
+                                    <a href="#">Рязаночка</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="py-4">
-                    <div class="row">
-                        <div class="col-lg-7">
-                            <p class="fz-11">Группа компаний «ГрейнХолдинг» включает в себя бренды «Рязаночка» и «Русский хлеб» - торговые марки, прочно зарекомендовавшие себя на рынке.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="py-4">
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="d-flex justify-content-center">
-                                <img src="images/brand-01.png" alt="IMG">
+                    <div class="col-md-6">
+                        <div class="card card-big-brand">
+                            <div class="card-img-wrapper">
+                                <a href="#">
+                                    <img class="card-img" src="images/brand-02.png" alt="Русский хлеб">
+                                </a>
                             </div>
-                            <div class="text-center">
-                                <p class="h2 ff-title">Рязаночка</p>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center px-3 pt-4">
-                                <span class="fz-15">подробнее</span>
-                                <a class="fz-15 fw-medium external-link" href="#" target="_blank">rmuka.ru</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="d-flex justify-content-center">
-                                <img src="images/brand-02.png" alt="IMG">
-                            </div>
-                            <div class="text-center">
-                                <p class="h2 ff-title">Русский хлеб</p>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center px-3 pt-4">
-                                <span class="fz-15">подробнее</span>
-                                <a class="fz-15 fw-medium external-link" href="#" target="_blank">rmuka.ru</a>
+                            <div class="card-body">
+                                <p class="h2 card-title">
+                                    <a href="#">Русский хлеб</a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -223,286 +501,332 @@
         </section>
 
         <!-- History -->
-        <section class="section">
+        <section class="section section-history">
             <div class="container">
                 <!-- Title -->
-                <div class="mb-25">
-                    <div class="row g-4">
-                        <div class="col-lg-8">
-                            <h2 class="ff-title mb-0">О компании</h2>
-                        </div>
-                    </div>
+                <div class="section-heading">
+                    <h2 class="section-title">
+                        <a href="razvitie.html">История</a>
+                        <svg class="svg-icon title-link-arrow" width="39" height="40">
+                            <use xlink:href="css/sprite.svg#title-link-arrow"></use>
+                        </svg>
+                    </h2>
                 </div>
-
-                <div class="py-4">
-                    <div class="swiper historySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="px-3">
-                                    <div class="pt-4 pb-5">
-                                        <p class="fz-17 mb-0">2005</p>
-                                        <p>Январь</p>
+                <div class="swiper historySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card card-history">
+                                <div class="card-body">
+                                    <div class="card-date">
+                                        <p class="card-year">2005</p>
+                                        <p class="crad-month">Январь</p>
                                     </div>
-                                    <p class="fz-15">Бесплатная дегустация блинов из муки «Рязаночка»</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="px-3">
-                                    <div class="pt-4 pb-5">
-                                        <p class="fz-17 mb-0">2005</p>
-                                        <p>Октябрь</p>
+                                    <div class="card-icon">
+                                        <svg class="svg-icon icon-history-eye" width="51" height="30">
+                                            <use xlink:href="css/sprite.svg#icon-history-eye"></use>
+                                        </svg>
                                     </div>
-                                    <p class="fz-15">Строительство второго мельничного комплекса.<br> Бренд
-                                        Макдоналдс</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="px-3">
-                                    <div class="pt-4 pb-5">
-                                        <p class="fz-17 mb-0">2010</p>
-                                        <p>Апрель</p>
-                                    </div>
-                                    <p class="fz-15">В Китае начались массовые продажи российской муки</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="px-3">
-                                    <div class="pt-4 pb-5">
-                                        <p class="fz-17 mb-0">2010</p>
-                                        <p>Октябрь</p>
-                                    </div>
-                                    <p class="fz-15">Строительство второго мельничного комплекса.<br> Бренд
-                                        Макдоналдс</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="px-3">
-                                    <div class="pt-4 pb-5">
-                                        <p class="fz-17 mb-0">2010</p>
-                                        <p>Апрель</p>
-                                    </div>
-                                    <p class="fz-15">В Китае начались массовые продажи российской муки</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="px-3">
-                                    <div class="pt-4 pb-5">
-                                        <p class="fz-17 mb-0">2011</p>
-                                        <p>Январь</p>
-                                    </div>
-                                    <p class="fz-15">Бесплатная дегустация блинов из муки «Рязаночка»</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="px-3">
-                                    <div class="pt-4 pb-5">
-                                        <p class="fz-17 mb-0">2011</p>
-                                        <p>Октябрь</p>
-                                    </div>
-                                    <p class="fz-15">Строительство второго мельничного комплекса.<br> Бренд
-                                        Макдоналдс</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="px-3">
-                                    <div class="pt-4 pb-5">
-                                        <p class="fz-17 mb-0">2012</p>
-                                        <p>Апрель</p>
-                                    </div>
-                                    <p class="fz-15">В Китае начались массовые продажи российской муки</p>
+                                    <p class="card-text">Бесплатная дегустация блинов из муки «Рязаночка»</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-slide">
+                            <div class="card card-history">
+                                <div class="card-body">
+                                    <div class="card-date">
+                                        <p class="card-year">2005</p>
+                                        <p class="crad-month">Октябрь</p>
+                                    </div>
+                                    <div class="card-icon">
+                                        <svg class="svg-icon icon-history-eye" width="51" height="30">
+                                            <use xlink:href="css/sprite.svg#icon-history-eye"></use>
+                                        </svg>
+                                    </div>
+                                    <p class="card-text">Строительство второго мельничного комплекса.<br> Бренд Макдоналдс</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card card-history">
+                                <div class="card-body">
+                                    <div class="card-date">
+                                        <p class="card-year">2010</p>
+                                        <p class="crad-month">Апрель</p>
+                                    </div>
+                                    <div class="card-icon">
+                                        <svg class="svg-icon icon-history-eye" width="51" height="30">
+                                            <use xlink:href="css/sprite.svg#icon-history-eye"></use>
+                                        </svg>
+                                    </div>
+                                    <p class="card-text">В Китае начались массовые продажи российской муки</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card card-history">
+                                <div class="card-body">
+                                    <div class="card-date">
+                                        <p class="card-year">2010</p>
+                                        <p class="crad-month">Октябрь</p>
+                                    </div>
+                                    <div class="card-icon">
+                                        <svg class="svg-icon icon-history-eye" width="51" height="30">
+                                            <use xlink:href="css/sprite.svg#icon-history-eye"></use>
+                                        </svg>
+                                    </div>
+                                    <p class="card-text">Строительство второго мельничного комплекса.<br> Бренд Макдоналдс</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card card-history">
+                                <div class="card-body">
+                                    <div class="card-date">
+                                        <p class="card-year">2010</p>
+                                        <p class="crad-month">Апрель</p>
+                                    </div>
+                                    <div class="card-icon">
+                                        <svg class="svg-icon icon-history-eye" width="51" height="30">
+                                            <use xlink:href="css/sprite.svg#icon-history-eye"></use>
+                                        </svg>
+                                    </div>
+                                    <p class="card-text">В Китае начались массовые продажи российской муки</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card card-history">
+                                <div class="card-body">
+                                    <div class="card-date">
+                                        <p class="card-year">2011</p>
+                                        <p class="crad-month">Январь</p>
+                                    </div>
+                                    <div class="card-icon">
+                                        <svg class="svg-icon icon-history-eye" width="51" height="30">
+                                            <use xlink:href="css/sprite.svg#icon-history-eye"></use>
+                                        </svg>
+                                    </div>
+                                    <p class="card-text">Бесплатная дегустация блинов из муки «Рязаночка»</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card card-history">
+                                <div class="card-body">
+                                    <div class="card-date">
+                                        <p class="card-year">2011</p>
+                                        <p class="crad-month">Октябрь</p>
+                                    </div>
+                                    <div class="card-icon">
+                                        <svg class="svg-icon icon-history-eye" width="51" height="30">
+                                            <use xlink:href="css/sprite.svg#icon-history-eye"></use>
+                                        </svg>
+                                    </div>
+                                    <p class="card-text">Строительство второго мельничного комплекса.<br> Бренд Макдоналдс</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card card-history">
+                                <div class="card-body">
+                                    <div class="card-date">
+                                        <p class="card-year">2012</p>
+                                        <p class="crad-month">Апрель</p>
+                                    </div>
+                                    <div class="card-icon">
+                                        <svg class="svg-icon icon-history-eye" width="51" height="30">
+                                            <use xlink:href="css/sprite.svg#icon-history-eye"></use>
+                                        </svg>
+                                    </div>
+                                    <p class="card-text">В Китае начались массовые продажи российской муки</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
-
             </div>
         </section>
 
-        <!-- Партнёры -->
-        <section class="section">
+        <!-- Partners -->
+        <section class="section section-partners">
             <div class="container">
                 <!-- Title -->
-                <div class="mb-25">
-                    <div class="row g-4">
-                        <div class="col-lg-8">
-                            <h2 class="ff-title mb-0">Партнёры</h2>
-                        </div>
-                    </div>
+                <div class="section-heading">
+                    <h2 class="section-title">
+                        <a href="partners.html">Партнёры</a>
+                        <svg class="svg-icon title-link-arrow" width="39" height="40">
+                            <use xlink:href="css/sprite.svg#title-link-arrow"></use>
+                        </svg>
+                    </h2>
                 </div>
-
-                <div class="py-4">
-                    <div class="row g-4">
-                        <div class="col-lg-6">
-                            <p class="fz-15">Поставляют нам зерно</p>
-                            <div class="bg-color-light-grey p-4">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="partner-img">
-                                            <img src="images/partners/001.png" alt="IMG">
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="partner-img">
-                                            <img src="images/partners/002.png" alt="IMG">
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="partner-img">
-                                            <img src="images/partners/003.png" alt="IMG">
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="partner-img">
-                                            <img src="images/partners/004.png" alt="IMG">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>    
-                        <div class="col-lg-6">
-                            <p class="fz-15">Производят продукты из нашей муки</p>
-                            <div class="bg-color-light-grey p-4">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="partner-img">
-                                            <img src="images/partners/005.png" alt="IMG">
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="partner-img">
-                                            <img src="images/partners/006.png" alt="IMG">
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="partner-img">
-                                            <img src="images/partners/007.png" alt="IMG">
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="partner-img">
-                                            <img src="images/partners/008.png" alt="IMG">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>                                
-                        </div>
-                    </div>
-                </div>
-                <div class="py-4">
-                    <p class="fz-15">Продают нашу муку и хлеб</p>
-                    <div class="bg-color-light-grey p-4">
+                <div class="partners-area">
+                    <p class="fs-4">Поставляют нам зерно</p>
+                    <div class="partners-wrapper">
                         <div class="row">
-                            <div class="col-6 col-md-6 col-lg-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/009.png" alt="IMG">
+                                    <img src="images/partners/001.png" alt="Русагро">
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 col-lg-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/010.png" alt="IMG">
+                                    <img src="images/partners/002.png" alt="Окаагро">
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 col-lg-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/011.png" alt="IMG">
+                                    <img src="images/partners/003.png" alt="Русская Аграрная Группа">
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 col-lg-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/012.png" alt="IMG">
+                                    <img src="images/partners/004.png" alt="АГРОТЕРРА">
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 col-lg-3">
+                        </div>
+                    </div>
+                </div>
+                <div class="partners-area">
+                    <p class="fs-4">Производят продукты из нашей муки</p>
+                    <div class="partners-wrapper">
+                        <div class="row">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/013.png" alt="IMG">
+                                    <img src="images/partners/005.png" alt="MD">
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 col-lg-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/014.png" alt="IMG">
+                                    <img src="images/partners/006.png" alt="Экстра М">
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 col-lg-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/015.png" alt="IMG">
+                                    <img src="images/partners/007.png" alt="Doshirak">
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 col-lg-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/016.png" alt="IMG">
+                                    <img src="images/partners/008.png" alt="Яшкино">
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 col-lg-3">
+                        </div>
+                    </div>                                
+                </div>
+                <div class="partners-area">
+                    <p class="fs-4">Продают нашу муку и хлеб</p>
+                    <div class="partners-wrapper">
+                        <div class="row">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/017.png" alt="IMG">
+                                    <img src="images/partners/009.png" alt="Дикси">
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 col-lg-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/018.png" alt="IMG">
+                                    <img src="images/partners/010.png" alt="Карусель">
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 col-lg-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/019.png" alt="IMG">
+                                    <img src="images/partners/011.png" alt="Пятёрочка">
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 col-lg-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/020.png" alt="IMG">
+                                    <img src="images/partners/012.png" alt="Магнолия">
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 col-lg-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/021.png" alt="IMG">
+                                    <img src="images/partners/013.png" alt="Перекрёсток">
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 col-lg-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/022.png" alt="IMG">
+                                    <img src="images/partners/014.png" alt="Монетка">
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 col-lg-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/023.png" alt="IMG">
+                                    <img src="images/partners/015.png" alt="Гроздь">
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 col-lg-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/024.png" alt="IMG">
+                                    <img src="images/partners/016.png" alt="Виктория">
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 col-lg-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/025.png" alt="IMG">
+                                    <img src="images/partners/017.png" alt="Утконос">
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 col-lg-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/026.png" alt="IMG">
+                                    <img src="images/partners/018.png" alt="Твой дом">
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 col-lg-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/027.png" alt="IMG">
+                                    <img src="images/partners/019.png" alt="Metro">
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 col-lg-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/028.png" alt="IMG">
+                                    <img src="images/partners/020.png" alt="Магнит">
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 col-lg-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/029.png" alt="IMG">
+                                    <img src="images/partners/021.png" alt="BILLA">
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 col-lg-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="partner-img">
-                                    <img src="images/partners/030.png" alt="IMG">
+                                    <img src="images/partners/022.png" alt="Мираторг">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="partner-img">
+                                    <img src="images/partners/023.png" alt="Семья">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="partner-img">
+                                    <img src="images/partners/024.png" alt="Барс">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="partner-img">
+                                    <img src="images/partners/025.png" alt="SPAR">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="partner-img">
+                                    <img src="images/partners/026.png" alt="SELGROS">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="partner-img">
+                                    <img src="images/partners/027.png" alt="Globus">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="partner-img">
+                                    <img src="images/partners/028.png" alt="OKEY">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="partner-img">
+                                    <img src="images/partners/029.png" alt="Оливье">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="partner-img">
+                                    <img src="images/partners/030.png" alt="Лента">
                                 </div>
                             </div>
                         </div>
@@ -511,60 +835,64 @@
             </div>
         </section>
 
-        <!-- Пресс-центр -->
-        <section class="section">
+        <!-- Blog -->
+        <section class="section section-blog-slider">
             <div class="container">
                 <!-- Title -->
-                <div class="mb-25">
-                    <div class="row g-4">
-                        <div class="col-lg-8">
-                            <h2 class="ff-title mb-0">Пресс-центр</h2>
+                <div class="section-heading">
+                    <h2 class="section-title">
+                        <a href="blog.html">Пресс-центр</a>
+                        <svg class="svg-icon title-link-arrow" width="39" height="40">
+                            <use xlink:href="css/sprite.svg#title-link-arrow"></use>
+                        </svg>
+                    </h2>
+                </div>
+                <div class="row gy-4">
+                    <div class="col-md-12 col-lg-4">
+                        <div class="card card-blog-slider">
+                            <div class="card-img-wrapper">
+                                <a href="blog-item.html">
+                                    <img class="card-img" src="images/blog/thumb/001.png" alt="Магия готовки. Готовьте и медитируйте с «Рязаночкой»">
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-date">9 июня 2021</p>
+                                <p class="card-title">
+                                    <a href="blog-item.html">Магия готовки. Готовьте и медитируйте с «Рязаночкой»</a>
+                                </p>
+                                <p class="card-text">Долгожданная коллекционка уже началась!</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="py-4">
-                    <div class="row g-4">
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card card-blog h-100">
-                                <a class="d-block hover-shine" href="blog-item.html">
-                                    <img class="card-img" src="images/blog/thumb/001.png" alt="">
+                    <div class="col-md-12 col-lg-4">
+                        <div class="card card-blog-slider">
+                            <div class="card-img-wrapper">
+                                <a href="blog-item.html">
+                                    <img class="card-img" src="images/blog/thumb/002.png" alt="Бренд муки «Рязаночка» запускает масштабный медиапроект">
                                 </a>
-                                <div class="card-body card-blog-body">
-                                    <p class="small color-light-gray">9 июня 2021</p>
-                                    <p class="fz-11 fw-medium">
-                                        <a href="blog-item.html">Магия готовки. Готовьте и медитируйте с "Рязаночкой"</a>
-                                    </p>
-                                    <p>Долгожданная коллекционка уже началась!</p>
-                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-date">9 июня 2021</p>
+                                <p class="card-title">
+                                    <a href="blog-item.html">Бренд муки «Рязаночка» запускает масштабный медиапроект</a>
+                                </p>
+                                <p class="card-text">День рождения клиента – наш любимый праздник!</p>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card card-blog h-100">
-                                <a class="d-block hover-shine" href="blog-item.html">
-                                    <img class="card-img" src="images/blog/thumb/002.png" alt="">
+                    </div>
+                    <div class="col-md-12 col-lg-4">
+                        <div class="card card-blog-slider">
+                            <div class="card-img-wrapper">
+                                <a href="blog-item.html">
+                                    <img class="card-img" src="images/blog/thumb/003.png" alt="Мука «Рязаночка» поддержала правительственную программу по продвижению продукции АПК на внешние рынки">
                                 </a>
-                                <div class="card-body card-blog-body">
-                                    <p class="small color-light-gray">9 июня 2021</p>
-                                    <p class="fz-11 fw-medium">
-                                        <a href="blog-item.html">Бренд муки "Рязаночка" запускает масштабный медиапроект</a>
-                                    </p>
-                                    <p>День рождения клиента – наш любимый праздник!</p>
-                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card card-blog h-100">
-                                <a class="d-block hover-shine" href="blog-item.html">
-                                    <img class="card-img" src="images/blog/thumb/003.png" alt="">
-                                </a>
-                                <div class="card-body card-blog-body">
-                                    <p class="small color-light-gray">9 июня 2021</p>
-                                    <p class="fz-11 fw-medium">
-                                        <a href="blog-item.html">Мука «Рязаночка» поддержала правительственную программу по продвижению продукции АПК на внешние рынки</a>
-                                    </p>
-                                    <p>Больше бонусов на товары вашего и нашего любимого бренда каждый месяц!</p>
-                                </div>
+                            <div class="card-body">
+                                <p class="card-date">9 июня 2021</p>
+                                <p class="card-title">
+                                    <a href="blog-item.html">Мука «Рязаночка» поддержала правительственную программу по продвижению продукции АПК на внешние рынки</a>
+                                </p>
+                                <p class="card-text">Больше бонусов на товары вашего и нашего любимого бренда каждый месяц!</p>
                             </div>
                         </div>
                     </div>
@@ -577,138 +905,141 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="border-1 border-top border-bottom py-4">
-                <div class="row align-items-center g-4">
-                    <div class="col-lg-4">
+            <div class="footer-top">
+                <div class="row gy-4 align-items-center">
+                    <div class="col-lg-4 text-center text-lg-start">
                         <p class="mb-0">Обратная связь</p>
-                        <p class="ff-title fz-17">Заказать звонок</p>
+                        <p class="ff-title fs-4 mb-0">Заказать звонок</p>
                     </div>
                     <div class="col-lg-4">
-                        <form class="d-flex" action="#" method="post">
-                            <input type="text" class="form-control me-2" placeholder="Номер телефона">
+                        <form class="d-flex gap-3" action="#">
+                            <input type="text" class="form-control" placeholder="Номер телефона">
                             <button type="submit" class="btn btn-primary">
-                                <img src="images/icons/phone-white.svg" alt="">
+                                <svg class="svg-icon icon-phone" width="18" height="18">
+                                    <use xlink:href="css/sprite.svg#icon-phone"></use>
+                                </svg>
                             </button>
                         </form>
                     </div>
-                    <div class="col-lg-4 text-lg-end">
+                    <div class="col-lg-4 text-center text-lg-end">
                         <p class="mb-0">Горячая линия:</p>
-                        <p class="ff-title fz-17">
+                        <p class="ff-title fs-4 mb-0">
                             <a href="tel:88002002990">8 800 200 29 90</a>
                         </p>
                     </div>
                 </div>
             </div>
-
-            <div class="py-5">
-                <div class="row g-4">
+            <div class="footer-middle">
+                <div class="footer-widget">
+                    <div class="custom-html-widget">
+                        <img class="footer-logo" src="images/logo-footer.svg" alt="IMG-LOGO">
+                    </div>
+                </div>
+                <div class="row gy-4">
                     <div class="col-lg-6">
-                        <a class="d-block hover-opacity mb-5" href="#">
-                            <img src="images/logo-footer.svg" alt="IMG-LOGO">
-                        </a>
                         <div class="row">
                             <div class="col-6">
-                                <ul class="nav flex-column sidebar-nav">
-                                    <li class="nav-item"><a class="nav-link" href="#">Бренды</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Пресс-центр</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Где купить?</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Партнерам</a></li>
-                                </ul>
+                                <div class="footer-widget">
+                                    <ul class="menu">
+                                        <li><a href="#">Бренды</a></li>
+                                        <li><a href="#">Пресс-центр</a></li>
+                                        <li><a href="#">Где купить?</a></li>
+                                        <li><a href="#">Партнерам</a></li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="col-6">
-                                <ul class="nav flex-column sidebar-nav">
-                                    <li class="nav-item"><a class="nav-link" href="#">Акции</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Вакансии</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Устойчивое развитие</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 text-lg-end">
-                        <div class="mb-5">
-                            <div class="row">
-                                <div class="col-lg-6 ms-auto">
-                                    <select class="form-select">
-                                        <option selected="">Подольск</option>
-                                        <option value="1">Москва</option>
-                                        <option value="2">Санкт-Петербург</option>
-                                        <option value="3">Казань</option>
-                                    </select>
+                                <div class="footer-widget">
+                                    <ul class="menu">
+                                        <li><a href="#">Акции</a></li>
+                                        <li><a href="#">Вакансии</a></li>
+                                        <li><a href="#">Устойчивое развитие</a></li>
+                                        <li><a href="#">Контакты</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <p>Московская область, г. Подольск, ул. Лобачева, 19</p>
-                        <p><a href="tel:+74956482949">+7 495 648-29-49</a></p>
-                        <p><a href="mailto:info@grainholding.ru">info@grainholding.ru</a></p>
+                    </div>
+                    <div class="col-lg-6 text-lg-end">
+                        <div class="footer-widget">
+                            <div class="custom-html-widget">
+                                <p>Московская область, г. Подольск, ул. Лобачева, 19</p>
+                                <p><a href="tel:+74956482949">+7 495 648-29-49</a></p>
+                                <p><a href="mailto:info@grainholding.ru">info@grainholding.ru</a></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="py-4">
-                <div class="row g-4">
-                    <div class="col-lg-6">
-                        <p>© 2018 Группа компаний «Грейн Холдинг»</p>
-                        <style>
-                            .startsite {
-                                display: inline-block;
-                                padding-left: 45px;
-                                width: 195px;
-                                height: 35px;
-                                line-height: 18px;
-                                font-size: 14px;
-                                background: url('images/icons/startsite-logo1.svg') left center no-repeat;
-                                background-size: contain;
-                                -webkit-filter: grayscale(100%) brightness(0%) opacity(50%);
-                                filter: grayscale(100%) brightness(0%) opacity(50%);
-                            }
-                        </style>
-                        <a class="startsite" href="https://startsite.studio" target="_blank" rel="noopener">Дизайн и разработка сайта — «СтартСайт»</a>
-                    </div>
+            <div class="footer-bottom">
+                <div class="row">
                     <div class="col-lg-6 text-lg-end">
-                        <ul class="nav justify-content-lg-end">
-                            <li class="nav-item hover-opacity">
-                                <a class="nav-link" href="#">
-                                    <img src="images/icons/social-vk.svg" alt="">
+                        <ul class="social-menu">
+                            <li>
+                                <a href="#">
+                                    <svg class="svg-icon social-facebook" width="12" height="20">
+                                        <use xlink:href="css/sprite.svg#social-facebook"></use>
+                                    </svg>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link hover-opacity" href="#">
-                                    <img src="images/icons/social-youtube.svg" alt="">
+                            <li>
+                                <a href="#">
+                                    <svg class="svg-icon social-insta" width="20" height="20">
+                                        <use xlink:href="css/sprite.svg#social-insta"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg class="svg-icon social-twitter" width="22" height="19">
+                                        <use xlink:href="css/sprite.svg#social-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg class="svg-icon social-vk" width="24" height="16">
+                                        <use xlink:href="css/sprite.svg#social-vk"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg class="svg-icon social-youtube" width="22" height="16">
+                                        <use xlink:href="css/sprite.svg#social-youtube"></use>
+                                    </svg>
                                 </a>
                             </li>
                         </ul>
+                    </div>
+                    <div class="col-lg-6 text-center text-lg-start order-lg-first">
+                        <p class="copyright-text">© 2018 Группа компаний «Грейн Холдинг»</p>
+                        <style>
+                            .startsite-label {
+                                display: inline-flex;
+                                gap: 12px;
+                                text-align: left;
+                                line-height: 19px;
+                                font-size: 14px;
+                                -webkit-filter: grayscale(100%) brightness(0%) opacity(50%);
+                                filter: grayscale(100%) brightness(0%) opacity(50%);
+                            }
+                            .startsite-label img {
+                                flex-shrink: 0;
+                                max-width: 100%;
+                                height: auto;
+                                width: 35px;
+                            }
+                        </style>
+                        <a href="https://startsite.studio" class="startsite-label" target="_blank" rel="noopener">
+                            <img src="images/startsite-logo1.svg" alt="Веб студия СтартСайт">
+                            <span>Дизайн и разработка<br> сайта — «СтартСайт»</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-
-    <!-- Back Top -->
-    <button type="button" class="btn btn-icon btn-primary back-top" id="back-top">
-        <i class="icon icon-link" style="transform: rotate(-45deg);"></i>
-    </button>
-
-    <!-- Modal Search -->
-    <div class="modal-search js-search-close">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="modal-wrap position-relative">
-                        <button type="button" class="btn-modal-close hover-opacity js-search-close">
-                            <i class="icon icon-x_big"></i>
-                        </button>
-                        <form class="form-search d-flex">
-                            <button type="button" class="hover-opacity">
-                                <i class="icon icon-search"></i>
-                            </button>
-                            <input type="text" name="search" placeholder="Поиск">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>

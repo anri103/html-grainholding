@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- (c) Startsite Digital Agency | https://startsite.studio/ -->
 <html lang="ru">
 
 <head>
@@ -14,81 +13,347 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body class="page-template-default page">
 
     <!-- Header -->
+    <!-- НЕ добавляется класс header-transparent -->
     <header class="header">
-        <nav class="navbar navbar-expand-lg fixed-top" id="navbar-main">
-            <div class="container">
-
-                <!-- Logo desktop -->
-                <a class="navbar-brand hover-opacity" href="index.html">
-                    <img class="logo-black" src="images/logo_black.svg" alt="">
-                    <img class="logo-white" src="images/logo_white.svg" alt="">
-                </a>
-
-                <!-- Menu toggler -->
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="icon-bar top-bar"></span>
-                    <span class="icon-bar middle-bar"></span>
-                    <span class="icon-bar bottom-bar"></span>
-                </button>
-
-                <!-- Main Menu -->
-                <div class="collapse navbar-collapse" id="main-menu">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="brands.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Бренды</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="brands.html#brand-01">Рязаночка</a>
-                                <a class="dropdown-item" href="brands.html#brand-02">Русский хлеб</a>
+        <div class="sticky-wrapper">
+            <div class="menu-area">
+                <div class="container">
+                    <div class="row gx-0 align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <!-- Logo desktop -->
+                             <div class="header-logo">
+                                 <a href="index.html">
+                                     <img class="logo-black" src="images/logo_black.svg" alt="Грейн Холдинг">
+                                     <img class="logo-white" src="images/logo_white.svg" alt="Грейн Холдинг">
+                                 </a>
+                             </div>
+                        </div>
+                        <div class="col-auto ms-auto">
+                            <div class="header-nav">
+                                <!-- Main Menu -->
+                                 <!-- Стандартное меню WP -->
+                                <nav class="main-menu">
+                                    <ul>
+                                        <li class="menu-item-has-children">
+                                            <a href="brands.html">Бренды</a>
+                                            <ul class="sub-menu">
+                                                <li class="">
+                                                    <a href="brands.html#brand-01">Рязаночка</a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="brands.html#brand-02">Русский хлеб</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="">
+                                            <a href="blog.html">Пресс-центр</a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="gde-kupit.html">Где купить</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="partners.html">Партнерам</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="akcii.html">Акции</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="razvitie.html">Развитие</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="vakansii.html">Вакансии</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <!-- Buttons -->
+                                <div class="header-btn-group">
+                                    <!-- Search -->
+                                    <button type="button" class="btn btn-search" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch">
+                                        <svg class="svg-icon icon-search" width="24" height="24">
+                                            <use xlink:href="css/sprite.svg#icon-search"></use>
+                                        </svg>
+                                    </button>
+                                    <!-- Mobile menu toggler -->
+                                    <button type="button" class="btn btn-mobile-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMobileMenu">
+                                        <svg class="svg-icon icon-menu" width="24" height="24">
+                                            <use xlink:href="css/sprite.svg#icon-menu"></use>
+                                        </svg>
+                                    </button>
+                                 </div>
                             </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Пресс-центр</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="gde-kupit.html">Где купить</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="partners.html">Партнерам</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="akcii.html">Акции</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="razvitie.html">Развитие</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="vakansii.html">Вакансии</a>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-                    <!-- Search -->
-                    <ul class="nav navbar-icons">
-                        <li class="nav-item">
-                            <a class="nav-link js-search-open" href="#">
-                                <i class="icon icon-search"></i>
+    <!-- Offcanvas Search -->
+    <div class="offcanvasSearch offcanvas offcanvas-top" id="offcanvasSearch" tabindex="-1">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <form action="#" class="form-search">
+                            <input type="text" class="form-control" name="search" placeholder="Поиск по сайту">
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Результаты поиска в товарах -->
+                    <!-- Слово из формы подсвечиваются тегом b -->
+                    <div class="col-md-6">
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-3">
+                                    <a href="#">
+                                        <img class="item-img img-fluid" src="images/products/001.png" alt="IMG-PRODUCT">
+                                    </a>
+                                </div>
+                                <div class="col-9">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">Мука пшеничная <b>хлеб</b>опекарная высшего сорта ТМ «Рязаночка» – это универсальный продукт для любого типа выпечки. Продукт производится на самой большой мельнице</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-3">
+                                    <a href="#">
+                                        <img class="item-img img-fluid" src="images/products/001.png" alt="IMG-PRODUCT">
+                                    </a>
+                                </div>
+                                <div class="col-9">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">Мука пшеничная <b>хлеб</b>опекарная высшего сорта ТМ «Рязаночка» – это универсальный продукт для любого типа выпечки. Продукт производится на самой большой мельнице</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-3">
+                                    <a href="#">
+                                        <img class="item-img img-fluid" src="images/products/001.png" alt="IMG-PRODUCT">
+                                    </a>
+                                </div>
+                                <div class="col-9">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">Мука пшеничная <b>хлеб</b>опекарная высшего сорта ТМ «Рязаночка» – это универсальный продукт для любого типа выпечки. Продукт производится на самой большой мельнице</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Результаты поиска на страницах -->
+                    <!-- Слово из формы подсвечиваются тегом b -->
+                    <div class="col-md-6">
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">
+                                        продукцию на своих площадках. Все желающие могли бесплатно попробовать блинчики с джемом из муки "Рязаночка" и продегустировать <b>хлеб</b> и булочки от "Русского <b>хлеб</b>а" . Для Рязанцев бы организована ярмарка народно-художественных промыслов, с мастер-классами от мастеров
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">
+                                        продукцию на своих площадках. Все желающие могли бесплатно попробовать блинчики с джемом из муки "Рязаночка" и продегустировать <b>хлеб</b> и булочки от "Русского <b>хлеб</b>а" . Для Рязанцев бы организована ярмарка народно-художественных промыслов, с мастер-классами от мастеров
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">
+                                        продукцию на своих площадках. Все желающие могли бесплатно попробовать блинчики с джемом из муки "Рязаночка" и продегустировать <b>хлеб</b> и булочки от "Русского <b>хлеб</b>а" . Для Рязанцев бы организована ярмарка народно-художественных промыслов, с мастер-классами от мастеров
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">
+                                        продукцию на своих площадках. Все желающие могли бесплатно попробовать блинчики с джемом из муки "Рязаночка" и продегустировать <b>хлеб</b> и булочки от "Русского <b>хлеб</b>а" . Для Рязанцев бы организована ярмарка народно-художественных промыслов, с мастер-классами от мастеров
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">
+                                        продукцию на своих площадках. Все желающие могли бесплатно попробовать блинчики с джемом из муки "Рязаночка" и продегустировать <b>хлеб</b> и булочки от "Русского <b>хлеб</b>а" . Для Рязанцев бы организована ярмарка народно-художественных промыслов, с мастер-классами от мастеров
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">
+                                        продукцию на своих площадках. Все желающие могли бесплатно попробовать блинчики с джемом из муки "Рязаночка" и продегустировать <b>хлеб</b> и булочки от "Русского <b>хлеб</b>а" . Для Рязанцев бы организована ярмарка народно-художественных промыслов, с мастер-классами от мастеров
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">
+                                        продукцию на своих площадках. Все желающие могли бесплатно попробовать блинчики с джемом из муки "Рязаночка" и продегустировать <b>хлеб</b> и булочки от "Русского <b>хлеб</b>а" . Для Рязанцев бы организована ярмарка народно-художественных промыслов, с мастер-классами от мастеров
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Offcanvas Mobile Menu -->
+    <div class="offcanvasMobileMenu offcanvas offcanvas-end" id="offcanvasMobileMenu" tabindex="-1">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Mobile Menu -->
+            <nav class="mobile-menu">
+                <ul>
+                    <li class="menu-item-has-children">
+                        <a href="brands.html">Бренды</a>
+                        <button type="button" class="btn btn-dropdown">
+                            <svg class="svg-icon icon-chevron-down" width="16" height="16">
+                                <use xlink:href="css/sprite.svg#icon-chevron-down"></use>
+                            </svg>
+                        </button>
+                        <ul class="sub-menu">
+                            <li class="">
+                                <a href="brands.html#brand-01">Рязаночка</a>
+                            </li>
+                            <li class="">
+                                <a href="brands.html#brand-02">Русский хлеб</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="blog.html">Пресс-центр</a>
+                    </li>
+                    <li class="active">
+                        <a href="gde-kupit.html">Где купить</a>
+                    </li>
+                    <li class="">
+                        <a href="partners.html">Партнерам</a>
+                    </li>
+                    <li class="">
+                        <a href="akcii.html">Акции</a>
+                    </li>
+                    <li class="">
+                        <a href="razvitie.html">Развитие</a>
+                    </li>
+                    <li class="">
+                        <a href="vakansii.html">Вакансии</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="offcanvas-footer">
+            <div class="d-flex flex-column gap-3">
+                <!-- Hot phone -->
+                <div class="custom-html-widget">
+                    <p class="mb-0">Горячая линия:</p>
+                    <p class="ff-title fs-4 mb-0">
+                        <a href="tel:88002002990">8 800 200 29 90</a>
+                    </p>
+                </div>
+                <!-- Social icons -->
+                <div class="custom-html-widget">
+                    <ul class="social-menu">
+                        <li>
+                            <a href="#">
+                                <svg class="svg-icon social-facebook" width="12" height="20">
+                                    <use xlink:href="css/sprite.svg#social-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="svg-icon social-insta" width="20" height="20">
+                                    <use xlink:href="css/sprite.svg#social-insta"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="svg-icon social-twitter" width="22" height="19">
+                                    <use xlink:href="css/sprite.svg#social-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="svg-icon social-vk" width="24" height="16">
+                                    <use xlink:href="css/sprite.svg#social-vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="svg-icon social-youtube" width="22" height="16">
+                                    <use xlink:href="css/sprite.svg#social-youtube"></use>
+                                </svg>
                             </a>
                         </li>
                     </ul>
                 </div>
-
             </div>
-        </nav>
-    </header>
+        </div>
+    </div>
 
     <main class="main">
 
-        <!-- Title -->
-        <section class="section page-title">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-10">
-                        <div class="position-relative z-index-1 text-center">
-                            <h1 class="ff-title">Купить сейчас</h1>
-                        </div>
-                    </div>
+        <!-- Hero title -->
+        <section class="section section-hero-title">
+            <div class="hero-heading">
+                <div class="container">
+                    <h1>Купить сейчас</h1>
                 </div>
             </div>
         </section>
@@ -152,6 +417,7 @@
                         <a class="btn btn-primary btn-xl text-uppercase" href="#">Отправить предложение</a>
                     </div>
                 </div>
+            </div>
         </section>
 
     </main>
@@ -159,138 +425,141 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="border-1 border-top border-bottom py-4">
-                <div class="row align-items-center g-4">
-                    <div class="col-lg-4">
+            <div class="footer-top">
+                <div class="row gy-4 align-items-center">
+                    <div class="col-lg-4 text-center text-lg-start">
                         <p class="mb-0">Обратная связь</p>
-                        <p class="ff-title fz-17">Заказать звонок</p>
+                        <p class="ff-title fs-4 mb-0">Заказать звонок</p>
                     </div>
                     <div class="col-lg-4">
-                        <form class="d-flex" action="#" method="post">
-                            <input type="text" class="form-control me-2" placeholder="Номер телефона">
+                        <form class="d-flex gap-3" action="#">
+                            <input type="text" class="form-control" placeholder="Номер телефона">
                             <button type="submit" class="btn btn-primary">
-                                <img src="images/icons/phone-white.svg" alt="">
+                                <svg class="svg-icon icon-phone" width="18" height="18">
+                                    <use xlink:href="css/sprite.svg#icon-phone"></use>
+                                </svg>
                             </button>
                         </form>
                     </div>
-                    <div class="col-lg-4 text-lg-end">
+                    <div class="col-lg-4 text-center text-lg-end">
                         <p class="mb-0">Горячая линия:</p>
-                        <p class="ff-title fz-17">
+                        <p class="ff-title fs-4 mb-0">
                             <a href="tel:88002002990">8 800 200 29 90</a>
                         </p>
                     </div>
                 </div>
             </div>
-
-            <div class="py-5">
-                <div class="row g-4">
+            <div class="footer-middle">
+                <div class="footer-widget">
+                    <div class="custom-html-widget">
+                        <img class="footer-logo" src="images/logo-footer.svg" alt="IMG-LOGO">
+                    </div>
+                </div>
+                <div class="row gy-4">
                     <div class="col-lg-6">
-                        <a class="d-block hover-opacity mb-5" href="#">
-                            <img src="images/logo-footer.svg" alt="IMG-LOGO">
-                        </a>
                         <div class="row">
                             <div class="col-6">
-                                <ul class="nav flex-column sidebar-nav">
-                                    <li class="nav-item"><a class="nav-link" href="#">Бренды</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Пресс-центр</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Где купить?</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Партнерам</a></li>
-                                </ul>
+                                <div class="footer-widget">
+                                    <ul class="menu">
+                                        <li><a href="#">Бренды</a></li>
+                                        <li><a href="#">Пресс-центр</a></li>
+                                        <li><a href="#">Где купить?</a></li>
+                                        <li><a href="#">Партнерам</a></li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="col-6">
-                                <ul class="nav flex-column sidebar-nav">
-                                    <li class="nav-item"><a class="nav-link" href="#">Акции</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Вакансии</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Устойчивое развитие</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 text-lg-end">
-                        <div class="mb-5">
-                            <div class="row">
-                                <div class="col-lg-6 ms-auto">
-                                    <select class="form-select">
-                                        <option selected="">Подольск</option>
-                                        <option value="1">Москва</option>
-                                        <option value="2">Санкт-Петербург</option>
-                                        <option value="3">Казань</option>
-                                    </select>
+                                <div class="footer-widget">
+                                    <ul class="menu">
+                                        <li><a href="#">Акции</a></li>
+                                        <li><a href="#">Вакансии</a></li>
+                                        <li><a href="#">Устойчивое развитие</a></li>
+                                        <li><a href="#">Контакты</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <p>Московская область, г. Подольск, ул. Лобачева, 19</p>
-                        <p><a href="tel:+74956482949">+7 495 648-29-49</a></p>
-                        <p><a href="mailto:info@grainholding.ru">info@grainholding.ru</a></p>
+                    </div>
+                    <div class="col-lg-6 text-lg-end">
+                        <div class="footer-widget">
+                            <div class="custom-html-widget">
+                                <p>Московская область, г. Подольск, ул. Лобачева, 19</p>
+                                <p><a href="tel:+74956482949">+7 495 648-29-49</a></p>
+                                <p><a href="mailto:info@grainholding.ru">info@grainholding.ru</a></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="py-4">
-                <div class="row g-4">
-                    <div class="col-lg-6">
-                        <p>© 2018 Группа компаний «Грейн Холдинг»</p>
-                        <style>
-                            .startsite {
-                                display: inline-block;
-                                padding-left: 45px;
-                                width: 195px;
-                                height: 35px;
-                                line-height: 18px;
-                                font-size: 14px;
-                                background: url('images/icons/startsite-logo1.svg') left center no-repeat;
-                                background-size: contain;
-                                -webkit-filter: grayscale(100%) brightness(0%) opacity(50%);
-                                filter: grayscale(100%) brightness(0%) opacity(50%);
-                            }
-                        </style>
-                        <a class="startsite" href="https://startsite.studio" target="_blank" rel="noopener">Дизайн и разработка сайта — «СтартСайт»</a>
-                    </div>
+            <div class="footer-bottom">
+                <div class="row">
                     <div class="col-lg-6 text-lg-end">
-                        <ul class="nav justify-content-lg-end">
-                            <li class="nav-item hover-opacity">
-                                <a class="nav-link" href="#">
-                                    <img src="images/icons/social-vk.svg" alt="">
+                        <ul class="social-menu">
+                            <li>
+                                <a href="#">
+                                    <svg class="svg-icon social-facebook" width="12" height="20">
+                                        <use xlink:href="css/sprite.svg#social-facebook"></use>
+                                    </svg>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link hover-opacity" href="#">
-                                    <img src="images/icons/social-youtube.svg" alt="">
+                            <li>
+                                <a href="#">
+                                    <svg class="svg-icon social-insta" width="20" height="20">
+                                        <use xlink:href="css/sprite.svg#social-insta"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg class="svg-icon social-twitter" width="22" height="19">
+                                        <use xlink:href="css/sprite.svg#social-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg class="svg-icon social-vk" width="24" height="16">
+                                        <use xlink:href="css/sprite.svg#social-vk"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg class="svg-icon social-youtube" width="22" height="16">
+                                        <use xlink:href="css/sprite.svg#social-youtube"></use>
+                                    </svg>
                                 </a>
                             </li>
                         </ul>
+                    </div>
+                    <div class="col-lg-6 text-center text-lg-start order-lg-first">
+                        <p class="copyright-text">© 2018 Группа компаний «Грейн Холдинг»</p>
+                        <style>
+                            .startsite-label {
+                                display: inline-flex;
+                                gap: 12px;
+                                text-align: left;
+                                line-height: 19px;
+                                font-size: 14px;
+                                -webkit-filter: grayscale(100%) brightness(0%) opacity(50%);
+                                filter: grayscale(100%) brightness(0%) opacity(50%);
+                            }
+                            .startsite-label img {
+                                flex-shrink: 0;
+                                max-width: 100%;
+                                height: auto;
+                                width: 35px;
+                            }
+                        </style>
+                        <a href="https://startsite.studio" class="startsite-label" target="_blank" rel="noopener">
+                            <img src="images/startsite-logo1.svg" alt="Веб студия СтартСайт">
+                            <span>Дизайн и разработка<br> сайта — «СтартСайт»</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-
-    <!-- Back Top -->
-    <button type="button" class="btn btn-icon btn-primary back-top" id="back-top">
-        <i class="icon icon-link" style="transform: rotate(-45deg);"></i>
-    </button>
-
-    <!-- Modal Search -->
-    <div class="modal-search js-search-close">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="modal-wrap position-relative">
-                        <button type="button" class="btn-modal-close hover-opacity js-search-close">
-                            <i class="icon icon-x_big"></i>
-                        </button>
-                        <form class="form-search d-flex">
-                            <button type="button" class="hover-opacity">
-                                <i class="icon icon-search"></i>
-                            </button>
-                            <input type="text" name="search" placeholder="Поиск">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- (c) Startsite Digital Agency | https://startsite.studio/ -->
 <html lang="ru">
 
 <head>
@@ -14,130 +13,437 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body class="page-template-default page">
 
     <!-- Header -->
+    <!-- НЕ добавляется класс header-transparent -->
     <header class="header">
-        <nav class="navbar navbar-expand-lg fixed-top" id="navbar-main">
-            <div class="container">
-
-                <!-- Logo desktop -->
-                <a class="navbar-brand hover-opacity" href="index.html">
-                    <img class="logo-black" src="images/logo_black.svg" alt="">
-                    <img class="logo-white" src="images/logo_white.svg" alt="">
-                </a>
-
-                <!-- Menu toggler -->
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="icon-bar top-bar"></span>
-                    <span class="icon-bar middle-bar"></span>
-                    <span class="icon-bar bottom-bar"></span>
-                </button>
-
-                <!-- Main Menu -->
-                <div class="collapse navbar-collapse" id="main-menu">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="brands.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Бренды</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="brands.html#brand-01">Рязаночка</a>
-                                <a class="dropdown-item" href="brands.html#brand-02">Русский хлеб</a>
+        <div class="sticky-wrapper">
+            <div class="menu-area">
+                <div class="container">
+                    <div class="row gx-0 align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <!-- Logo desktop -->
+                             <div class="header-logo">
+                                 <a href="index.html">
+                                     <img class="logo-black" src="images/logo_black.svg" alt="Грейн Холдинг">
+                                     <img class="logo-white" src="images/logo_white.svg" alt="Грейн Холдинг">
+                                 </a>
+                             </div>
+                        </div>
+                        <div class="col-auto ms-auto">
+                            <div class="header-nav">
+                                <!-- Main Menu -->
+                                 <!-- Стандартное меню WP -->
+                                <nav class="main-menu">
+                                    <ul>
+                                        <li class="menu-item-has-children">
+                                            <a href="brands.html">Бренды</a>
+                                            <ul class="sub-menu">
+                                                <li class="">
+                                                    <a href="brands.html#brand-01">Рязаночка</a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="brands.html#brand-02">Русский хлеб</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="">
+                                            <a href="blog.html">Пресс-центр</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="gde-kupit.html">Где купить</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="partners.html">Партнерам</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="akcii.html">Акции</a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="razvitie.html">Развитие</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="vakansii.html">Вакансии</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <!-- Buttons -->
+                                <div class="header-btn-group">
+                                    <!-- Search -->
+                                    <button type="button" class="btn btn-search" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch">
+                                        <svg class="svg-icon icon-search" width="24" height="24">
+                                            <use xlink:href="css/sprite.svg#icon-search"></use>
+                                        </svg>
+                                    </button>
+                                    <!-- Mobile menu toggler -->
+                                    <button type="button" class="btn btn-mobile-menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMobileMenu">
+                                        <svg class="svg-icon icon-menu" width="24" height="24">
+                                            <use xlink:href="css/sprite.svg#icon-menu"></use>
+                                        </svg>
+                                    </button>
+                                 </div>
                             </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Пресс-центр</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="gde-kupit.html">Где купить</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="partners.html">Партнерам</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="akcii.html">Акции</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="razvitie.html">Развитие</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="vakansii.html">Вакансии</a>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-                    <!-- Search -->
-                    <ul class="nav navbar-icons">
-                        <li class="nav-item">
-                            <a class="nav-link js-search-open" href="#">
-                                <i class="icon icon-search"></i>
+    <!-- Offcanvas Search -->
+    <div class="offcanvasSearch offcanvas offcanvas-top" id="offcanvasSearch" tabindex="-1">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <form action="#" class="form-search">
+                            <input type="text" class="form-control" name="search" placeholder="Поиск по сайту">
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Результаты поиска в товарах -->
+                    <!-- Слово из формы подсвечиваются тегом b -->
+                    <div class="col-md-6">
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-3">
+                                    <a href="#">
+                                        <img class="item-img img-fluid" src="images/products/001.png" alt="IMG-PRODUCT">
+                                    </a>
+                                </div>
+                                <div class="col-9">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">Мука пшеничная <b>хлеб</b>опекарная высшего сорта ТМ «Рязаночка» – это универсальный продукт для любого типа выпечки. Продукт производится на самой большой мельнице</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-3">
+                                    <a href="#">
+                                        <img class="item-img img-fluid" src="images/products/001.png" alt="IMG-PRODUCT">
+                                    </a>
+                                </div>
+                                <div class="col-9">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">Мука пшеничная <b>хлеб</b>опекарная высшего сорта ТМ «Рязаночка» – это универсальный продукт для любого типа выпечки. Продукт производится на самой большой мельнице</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-3">
+                                    <a href="#">
+                                        <img class="item-img img-fluid" src="images/products/001.png" alt="IMG-PRODUCT">
+                                    </a>
+                                </div>
+                                <div class="col-9">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">Мука пшеничная <b>хлеб</b>опекарная высшего сорта ТМ «Рязаночка» – это универсальный продукт для любого типа выпечки. Продукт производится на самой большой мельнице</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Результаты поиска на страницах -->
+                    <!-- Слово из формы подсвечиваются тегом b -->
+                    <div class="col-md-6">
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">
+                                        продукцию на своих площадках. Все желающие могли бесплатно попробовать блинчики с джемом из муки "Рязаночка" и продегустировать <b>хлеб</b> и булочки от "Русского <b>хлеб</b>а" . Для Рязанцев бы организована ярмарка народно-художественных промыслов, с мастер-классами от мастеров
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">
+                                        продукцию на своих площадках. Все желающие могли бесплатно попробовать блинчики с джемом из муки "Рязаночка" и продегустировать <b>хлеб</b> и булочки от "Русского <b>хлеб</b>а" . Для Рязанцев бы организована ярмарка народно-художественных промыслов, с мастер-классами от мастеров
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">
+                                        продукцию на своих площадках. Все желающие могли бесплатно попробовать блинчики с джемом из муки "Рязаночка" и продегустировать <b>хлеб</b> и булочки от "Русского <b>хлеб</b>а" . Для Рязанцев бы организована ярмарка народно-художественных промыслов, с мастер-классами от мастеров
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">
+                                        продукцию на своих площадках. Все желающие могли бесплатно попробовать блинчики с джемом из муки "Рязаночка" и продегустировать <b>хлеб</b> и булочки от "Русского <b>хлеб</b>а" . Для Рязанцев бы организована ярмарка народно-художественных промыслов, с мастер-классами от мастеров
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">
+                                        продукцию на своих площадках. Все желающие могли бесплатно попробовать блинчики с джемом из муки "Рязаночка" и продегустировать <b>хлеб</b> и булочки от "Русского <b>хлеб</b>а" . Для Рязанцев бы организована ярмарка народно-художественных промыслов, с мастер-классами от мастеров
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">
+                                        продукцию на своих площадках. Все желающие могли бесплатно попробовать блинчики с джемом из муки "Рязаночка" и продегустировать <b>хлеб</b> и булочки от "Русского <b>хлеб</b>а" . Для Рязанцев бы организована ярмарка народно-художественных промыслов, с мастер-классами от мастеров
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-search">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="h5 item-title">
+                                        <a href="#">Мука Стандарт 1 кг</a>
+                                    </div>
+                                    <div class="item-text">
+                                        продукцию на своих площадках. Все желающие могли бесплатно попробовать блинчики с джемом из муки "Рязаночка" и продегустировать <b>хлеб</b> и булочки от "Русского <b>хлеб</b>а" . Для Рязанцев бы организована ярмарка народно-художественных промыслов, с мастер-классами от мастеров
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Offcanvas Mobile Menu -->
+    <div class="offcanvasMobileMenu offcanvas offcanvas-end" id="offcanvasMobileMenu" tabindex="-1">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Mobile Menu -->
+            <nav class="mobile-menu">
+                <ul>
+                    <li class="menu-item-has-children">
+                        <a href="brands.html">Бренды</a>
+                        <button type="button" class="btn btn-dropdown">
+                            <svg class="svg-icon icon-chevron-down" width="16" height="16">
+                                <use xlink:href="css/sprite.svg#icon-chevron-down"></use>
+                            </svg>
+                        </button>
+                        <ul class="sub-menu">
+                            <li class="">
+                                <a href="brands.html#brand-01">Рязаночка</a>
+                            </li>
+                            <li class="">
+                                <a href="brands.html#brand-02">Русский хлеб</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="blog.html">Пресс-центр</a>
+                    </li>
+                    <li class="">
+                        <a href="gde-kupit.html">Где купить</a>
+                    </li>
+                    <li class="">
+                        <a href="partners.html">Партнерам</a>
+                    </li>
+                    <li class="">
+                        <a href="akcii.html">Акции</a>
+                    </li>
+                    <li class="active">
+                        <a href="razvitie.html">Развитие</a>
+                    </li>
+                    <li class="">
+                        <a href="vakansii.html">Вакансии</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="offcanvas-footer">
+            <div class="d-flex flex-column gap-3">
+                <!-- Hot phone -->
+                <div class="custom-html-widget">
+                    <p class="mb-0">Горячая линия:</p>
+                    <p class="ff-title fs-4 mb-0">
+                        <a href="tel:88002002990">8 800 200 29 90</a>
+                    </p>
+                </div>
+                <!-- Social icons -->
+                <div class="custom-html-widget">
+                    <ul class="social-menu">
+                        <li>
+                            <a href="#">
+                                <svg class="svg-icon social-facebook" width="12" height="20">
+                                    <use xlink:href="css/sprite.svg#social-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="svg-icon social-insta" width="20" height="20">
+                                    <use xlink:href="css/sprite.svg#social-insta"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="svg-icon social-twitter" width="22" height="19">
+                                    <use xlink:href="css/sprite.svg#social-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="svg-icon social-vk" width="24" height="16">
+                                    <use xlink:href="css/sprite.svg#social-vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="svg-icon social-youtube" width="22" height="16">
+                                    <use xlink:href="css/sprite.svg#social-youtube"></use>
+                                </svg>
                             </a>
                         </li>
                     </ul>
                 </div>
-
             </div>
-        </nav>
-    </header>
+        </div>
+    </div>
 
     <main class="main">
-
-        <!-- Title -->
-        <section class="section page-title">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-10">
-                        <div class="position-relative z-index-1 text-center">
-                            <h1 class="ff-title">Устойчивое развитие</h1>
-                        </div>
-                    </div>
+        
+        <!-- Hero title -->
+        <section class="section section-hero-title">
+            <div class="hero-heading">
+                <div class="container">
+                    <h1>Устойчивое развитие</h1>
                 </div>
             </div>
         </section>
 
-        <!-- Hero block -->
-        <section class="section">
+        <!-- Image area -->
+        <section class="section section-bg-image">
             <div class="container">
-                <div class="hero-block d-flex align-items-center align-items-lg-end px-4 bg-img" style="background-image: url(images/heiko-janowski-XLmWt913EOc-unsplash.png);">
+                <div class="image-container" style="background-image: url(images/heiko-janowski-XLmWt913EOc-unsplash.png);">
                     <div class="row justify-content-center">
                         <div class="col-lg-10 text-center">
-                            <p class="fz-12 color-white">Ведение деятельности в соответствии с лучшими практиками корпоративного управления и с учетом ее благоприятного влияния на окружающую среду и общество</p>
+                            <p class="fs-4">Ведение деятельности в соответствии с лучшими практиками корпоративного управления и с учетом ее благоприятного влияния на окружающую среду и общество</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- О концепции устойчивого развития -->
+        <!-- Benefits -->
         <section class="section">
             <div class="container">
-                <div class="mb-25">
-                    <div class="row g-4">
-                        <div class="col-lg-8">
-                            <h2 class="ff-title mb-0">О концепции устойчивого развития</h2>
+                <div class="section-heading">
+                    <h2 class="section-title">О концепции устойчивого развития</h2>
+                </div>
+                <div class="row gy-5">
+                    <div class="col-md-4">
+                        <div class="card card-benefits">
+                            <div class="card-svg-wrapper">
+                                <svg class="card-svg" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M63.3564 33.2689C63.3564 33.2689 63.3564 19.0928 63.3564 11.7806C59.8911 13.9191 56.599 15.9196 53.3069 17.9546C53.3069 20.2655 53.3069 22.5075 53.3069 24.784C51.9554 24.784 50.7079 24.784 49.3218 24.784C49.3218 21.4383 49.3218 18.196 49.3218 14.9193C47.7277 14.6434 46.203 15.0228 44.7129 14.6779C44.7129 12.8843 44.7129 11.1597 44.7129 9.43514C44.7129 7.67606 44.6782 5.91698 44.6782 4.1579C41.2129 3.88197 33.4851 3.98545 32.2376 4.33036C32.2376 6.2619 32.2376 8.19344 32.2376 10.1595C32.2376 12.0565 32.2376 13.9536 32.2376 15.8506C32.2376 17.7821 32.2723 19.7137 32.203 21.7142C31.0594 21.7142 30.0891 21.7487 29.0842 21.7142C28.0792 21.6797 27.0396 21.8867 25.9653 21.5417C25.9653 19.5412 25.9653 17.6097 25.9653 15.6436C24.2327 14.6089 22.604 13.5741 20.9059 12.5739C19.2079 13.6431 17.5792 14.6089 15.9505 15.6436C15.8812 19.2998 15.9851 22.8869 15.8812 26.612C14.4604 26.612 12 26.612 12 26.612L12.1386 59.862C12.1386 59.862 17.8218 59.862 20.6287 59.862L21.2525 58.9308C21.3911 58.7238 21.495 58.5514 21.6337 58.3444C21.9109 57.896 22.1881 57.4476 22.5347 57.0337C23.6436 55.5851 25.203 54.6193 26.9703 54.2399C27.8366 54.0674 28.703 53.9295 29.5693 53.8605C32.2376 53.619 34.5941 52.7912 36.7426 51.2736C36.7426 51.2391 36.7426 51.2391 36.7426 51.2046L35.4951 51.3426C35.1139 51.3771 34.7327 51.4116 34.3515 51.4116C31.4059 51.4116 28.6683 50.2043 26.6584 47.9969C24.5446 45.6859 23.4356 42.5472 23.7129 39.6154L23.8515 38.0288L25.4455 38.0633C27.9752 38.0978 30.5049 38.4427 32.9307 39.0635C34.4208 39.4429 35.8416 40.0293 37.1238 40.8226C37.1931 39.7879 37.2624 38.7531 37.5049 37.6839C38.198 34.5451 39.9307 32.2342 42.703 30.82C45.3713 29.4403 48.2475 29.2334 50.8119 29.0609L52.6139 28.923L52.6832 30.7165C52.6832 31.0614 52.7178 31.4064 52.7178 31.7168C52.7525 32.4066 52.7871 33.062 52.7871 33.7173V33.8898C52.7871 34.7866 52.7871 35.7178 52.6485 36.6836C52.4059 38.2357 51.8861 39.7189 51.0545 41.0296C49.5644 43.4095 47.0693 44.8581 44.4356 44.8581C43.8465 44.8581 43.2574 44.7892 42.703 44.6512L42.2871 44.5477C42.2525 45.548 42.2871 46.5827 42.2871 47.652C42.2871 48.3763 42.2871 49.1006 42.2871 49.8594C42.2871 50.0664 42.2871 50.2733 42.2871 50.4458C44.6782 50.8597 46.6188 51.9979 48.0396 53.895C48.4554 54.4468 49.0446 54.7918 49.8069 54.9297L50.0149 54.9642C50.7426 55.0677 51.4703 55.1712 52.0941 55.1712C52.1287 55.1712 52.198 55.1712 52.2327 55.1712C52.302 55.1712 52.3366 55.1712 52.4059 55.1712C53.7921 55.1712 55.0396 55.6196 56.2178 56.5508C56.703 56.9302 57.2921 57.4131 57.7772 58.0685C57.9158 58.2409 57.9505 58.2754 58.1584 58.2754C59.3366 58.4824 59.6832 59.1722 59.7871 60C60.3762 60 59.2327 60 59.7871 60C63.8069 60 66.5099 60 66.7871 60C67.1683 60 68 59.8965 68 59.8965C68 59.8965 68 42.5472 68 33.8898C68 33.7863 68 33.6138 68 33.6138L63.3564 33.2689Z" fill="#6FBA1F" fill-opacity="0.3"/>
+                                    <path d="M40.52 51.9289C40.52 51.3425 40.52 50.4112 40.52 49.7214C40.52 47.376 40.416 44.996 40.5893 42.6506C40.8318 39.2014 42.5299 36.6145 45.8566 35.1659C44.0546 37.4423 42.8071 39.8912 43.0843 42.8575C43.5348 42.961 43.9853 43.03 44.4011 43.03C46.411 43.03 48.3863 41.9263 49.5645 40.0292C50.2922 38.891 50.7427 37.6493 50.916 36.3386C51.0546 35.4418 51.0546 34.5105 51.0546 33.5793C51.0546 32.6825 50.9853 31.7512 50.9506 30.6475C48.2477 30.8199 45.7873 31.0269 43.5348 32.1996C41.1437 33.4413 39.7922 35.3728 39.2378 37.9252C38.9605 39.1324 38.9259 40.4086 38.8566 41.6848C38.7873 42.4091 38.8566 43.168 38.8566 44.1682C36.9853 42.3402 34.9407 41.2019 32.5843 40.6156C30.2279 40.0292 27.8714 39.7188 25.4803 39.6843C25.0645 44.1337 28.5992 49.5834 34.3863 49.5834C34.6982 49.5834 35.01 49.5834 35.3566 49.5489C34.8714 46.8241 33.1388 44.996 31.1289 43.3404C36.015 44.3062 39.0299 48.4797 38.4407 52.1358C38.9952 51.8599 39.6883 51.9978 40.52 51.9289Z" fill="#6FBA1F"/>
+                                    <path d="M56.357 58.9998C56.0105 58.5514 55.56 58.1375 55.1095 57.7925C54.3124 57.1717 53.4114 56.7923 52.3718 56.7923C52.3372 56.7923 52.3025 56.7923 52.2679 56.7923C52.1986 56.7923 52.1293 56.7923 52.06 56.7923C51.2283 56.7923 50.3619 56.6543 49.5303 56.5164C48.352 56.3439 47.3471 55.7575 46.6194 54.8263C45.1986 52.9292 43.2926 52.1014 40.9709 51.929C40.8669 51.929 40.6936 51.929 40.5204 51.929C39.6887 51.9979 38.9956 51.8255 38.3718 52.1014C35.8075 54.0674 32.8966 55.2057 29.6738 55.4816C28.8768 55.5506 28.0798 55.6541 27.2827 55.8265C25.8966 56.1369 24.7184 56.8613 23.852 57.9995C23.4362 58.5514 23.0897 59.1377 22.6738 59.7931C25.7233 59.7931 57.951 59.8965 57.951 59.8965C57.2926 59.8621 56.7728 59.5861 56.357 58.9998Z" fill="#212529"/>
+                                </svg>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-title">Что такое концепция устойчивого развития</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-inline-flex gap-2 align-items-center">
+                                    <a class="card-link" href="blog-item.html">Подробнее</a>
+                                    <svg class="svg-icon title-link-arrow" width="39" height="40">
+                                        <use xlink:href="css/sprite.svg#title-link-arrow"></use>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="py-4">
-                    <div class="row g-4">
-                        <div class="col-md-4">
-                            <img class="img-fluid mb-4" src="images/icons/eco-01.svg" alt="">
-                            <div class="mb-5">
-                                <p class="fz-17">Что такое концепция устойчивого развития</p>
+                    <div class="col-md-4">
+                        <div class="card card-benefits">
+                            <div class="card-svg-wrapper">
+                                <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                    <path d="M40.118 5.35094C51.8976 4.94271 63.0002 14.3318 64.9409 26.1249C65.7081 30.7061 65.3019 35.1059 64.1285 39.5509C62.1878 46.7629 58.8029 53.2945 54.9666 59.5992C51.2206 65.7226 46.9782 71.4377 42.4649 77.0167C42.2844 77.2435 42.0587 77.4703 41.8782 77.6971C40.6596 78.9671 39.3508 79.0125 38.2225 77.6971C36.4172 75.5653 34.7021 73.3881 32.9871 71.1655C28.203 64.8608 23.8703 58.2385 20.35 51.1173C18.1836 46.8082 16.4235 42.3178 15.4306 37.6005C13.8509 30.2979 14.6182 23.4035 18.6801 16.9626C22.9225 10.295 31.1367 4.98807 40.118 5.35094ZM39.9375 9.43316C28.7898 9.02494 18.5898 18.9584 18.6801 30.8422C18.7704 42.091 27.8871 52.2512 40.0729 52.2059C52.2135 52.1605 61.3303 42.0003 61.3303 30.7061C61.3303 18.9584 51.2657 8.93423 39.9375 9.43316Z" fill="#6FBA1F" fill-opacity="0.3"/>
+                                    <path d="M41.0201 42.9529C41.0201 39.3697 40.8396 35.9224 41.0652 32.4752C41.2909 28.9826 42.5997 25.8983 45.5785 23.7211C45.8944 23.4943 46.2554 23.3582 47.0678 22.95C44.7209 26.1251 42.7351 28.8466 42.6448 32.702C46.0749 32.8381 48.6475 31.6588 50.4979 29.1187C52.9351 25.7169 53.4766 21.8614 53.0704 17.7338C50.3174 17.507 47.8351 17.8699 45.4431 18.7771C43.051 19.6842 41.2457 21.3171 39.982 23.585C38.7183 25.8529 38.7183 28.393 38.4475 31.1598C34.3856 26.3972 29.2856 25.7169 23.96 25.7622C23.5538 32.7927 29.8724 38.9614 35.8298 37.4646C35.4237 34.3349 33.2573 32.2484 31.1812 30.162C36.4166 32.2938 38.6732 36.376 37.6351 42.8622C38.8086 43.588 39.9369 43.5426 41.0201 42.9529Z" fill="#6FBA1F"/>
+                                    <path d="M46.707 44.4042C46.3008 44.5857 45.6238 44.4042 45.2627 44.1321C44.0441 43.1342 42.6902 42.726 41.0203 42.9981C39.9371 43.5878 38.8088 43.6331 37.6805 42.9528C36.5973 42.6353 35.5141 42.726 34.4761 43.2703C32.5354 44.3135 30.5947 45.4928 27.8867 45.6289C30.8203 48.4865 34.2053 49.439 37.6353 49.9379C42.8256 50.6636 47.5645 49.4843 51.8521 46.0825C50.1822 44.9485 48.8733 43.4971 46.707 44.4042Z" fill="#212529"/>
+                                </svg>
                             </div>
-                            <a class="fz-15 link-underline" href="blog-item.html">Подробнее</a>
+                            <div class="card-body">
+                                <p class="card-title">Причины внимания компаний к вопросам устойчивого развития</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-inline-flex gap-2 align-items-center">
+                                    <a class="card-link" href="blog-item.html">Подробнее</a>
+                                    <svg class="svg-icon title-link-arrow" width="39" height="40">
+                                        <use xlink:href="css/sprite.svg#title-link-arrow"></use>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <img class="img-fluid mb-4" src="images/icons/eco-02.svg" alt="">
-                            <div class="mb-5">
-                                <p class="fz-17">Причины внимания компаний к вопросам устойчивого развития</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-benefits">
+                            <div class="card-svg-wrapper">
+                                <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                    <path d="M33.5195 58.657C33.6867 57.3163 32.1815 56.7297 31.9306 56.1431C31.6797 55.5566 32.7668 54.7186 32.6832 54.0483C32.5996 53.3779 31.1779 53.6293 31.1779 53.6293C31.1779 53.6293 32.5996 52.7076 32.4323 51.9534C32.2651 51.1992 30.7598 50.8641 30.5089 50.1099C30.258 49.3558 31.479 48.9452 31.3452 48.0151C31.1779 46.8419 26.1603 44.9146 25.4077 43.7415C24.8307 42.8449 24.9059 41.2277 23.9024 39.2166C23.3337 38.077 22.6564 37.4234 21.9204 36.9877C15.4394 40.9931 13.0895 48.3 17.2206 55.4728C19.0437 58.6402 21.2932 61.1457 23.8104 63.0562C23.8439 63.0059 23.869 62.9556 23.894 62.9054C24.7219 61.2881 26.6621 61.506 29.2545 61.1708C31.8469 60.8356 33.3522 59.9977 33.5195 58.657Z" fill="#212529"/>
+                                    <path d="M61.3257 57.5841C61.5933 57.2406 61.7773 56.9138 61.886 56.587C61.3424 57.0311 60.7737 57.4417 60.18 57.7936C58.0559 59.0673 55.7143 59.7209 53.2222 59.7209C50.5295 59.7209 47.7447 58.9332 45.1606 57.4417C41.6567 55.4138 39.1479 52.2129 38.0774 48.4254C37.3833 45.9367 37.3582 43.3642 37.9771 40.8922C38.0858 40.4649 38.2112 40.0459 38.3534 39.6269C38.4705 39.3001 38.5876 38.9817 38.7297 38.6633C36.1958 36.1662 32.8675 34.8506 29.4388 34.8171C27.1976 34.8087 24.9229 35.3618 22.7988 36.493C25.3076 37.2388 26.7795 38.2946 27.6659 40.0627C28.6694 42.0737 28.5942 43.691 29.1712 44.5876C29.9238 45.7607 34.9414 47.688 35.1087 48.8611C35.2425 49.7912 34.0215 50.2018 34.2724 50.956C34.5233 51.7101 36.0286 52.0453 36.1958 52.7994C36.3631 53.5536 34.9414 54.4753 34.9414 54.4753C34.9414 54.4753 36.3631 54.224 36.4467 54.8943C36.5303 55.5647 35.4432 56.4026 35.6941 56.9892C35.945 57.5757 37.4502 58.1623 37.283 59.503C37.1157 60.8437 35.6104 61.6817 33.018 62.0169C30.4256 62.352 28.4771 62.1342 27.6575 63.7514C27.3732 64.3045 27.4234 64.891 27.6074 65.4189C31.1866 67.1954 35.1087 68.0082 39.0308 67.9998C39.0559 67.9998 39.0726 67.9998 39.0977 67.9998C39.2148 67.9998 39.3235 67.9998 39.4406 67.9998C47.9119 67.8406 56.3415 63.8939 61.3257 57.5841Z" fill="#6FBA1F" fill-opacity="0.3"/>
+                                    <path d="M41.7248 40.3647C41.2983 40.482 40.8551 40.5825 40.4119 40.658C40.0439 40.725 39.676 40.7753 39.2996 40.8172C38.7895 42.6188 38.6724 44.4455 38.9066 46.2219C40.5624 47.5794 42.6782 48.3922 44.9863 48.3922C50.2882 48.3922 54.5866 44.0852 54.5866 38.7726C54.5866 35.9571 53.3824 33.4349 51.4673 31.6752C50.7481 33.4516 49.6944 35.0772 48.3397 36.4682C46.4999 38.3536 44.2253 39.6776 41.7248 40.3647Z" fill="#212529"/>
+                                    <path d="M44.284 12.0334C44.2673 12.0334 44.2589 12.0334 44.2422 12.025C45.9064 12.754 47.3615 13.7763 48.5908 15.0668C49.887 16.4242 50.8822 18.0415 51.5679 19.8766C51.8439 20.6307 52.0697 21.41 52.2369 22.2145C52.3373 22.2396 52.446 22.2731 52.538 22.315L53.1568 22.6167C53.7422 22.9016 54.0349 23.5636 53.8509 24.1836L53.4829 25.4154C53.4411 25.5662 53.4913 25.7338 53.6251 25.8176C54.361 26.312 55.0468 26.8651 55.6823 27.4684C55.7994 27.5773 55.9667 27.5941 56.1088 27.5187L57.2294 26.8902C57.7897 26.5718 58.5006 26.7142 58.9103 27.217L59.3368 27.7533C59.7382 28.2644 59.7131 28.9851 59.2783 29.4627L58.4169 30.418C58.3082 30.5353 58.2915 30.7112 58.3751 30.8453C58.8183 31.5995 59.203 32.3955 59.5208 33.2251C59.5793 33.3759 59.7299 33.4681 59.8888 33.4597L61.1682 33.3759C61.8122 33.334 62.3976 33.7697 62.5397 34.3982L62.6903 35.0686C62.8324 35.697 62.4979 36.3422 61.8958 36.5852L60.6999 37.0713C60.5578 37.1299 60.4574 37.2807 60.4741 37.4316C60.5076 37.8673 60.5327 38.303 60.5327 38.7388C60.5327 39.1913 60.516 39.6354 60.4741 40.0711C60.4574 40.2303 60.5494 40.3728 60.6999 40.4398L61.8874 40.9258C62.4895 41.1688 62.8241 41.814 62.6735 42.4425L62.523 43.1128C62.3808 43.7413 61.7954 44.177 61.1515 44.1351L59.872 44.0513C59.7131 44.043 59.5626 44.1351 59.5041 44.286C59.1863 45.1155 58.8016 45.9116 58.3584 46.6657C58.2748 46.7998 58.2998 46.9758 58.4002 47.0931L59.2616 48.0484C59.6964 48.526 59.7215 49.255 59.3117 49.7578L58.8852 50.2941C58.4838 50.7968 57.773 50.9393 57.2043 50.6208L56.0837 49.984C55.9499 49.9086 55.7743 49.9254 55.6572 50.0343C55.0217 50.6376 54.3276 51.1907 53.5917 51.685C53.4579 51.7772 53.3993 51.9364 53.4495 52.0873L53.8175 53.319C54.0014 53.9391 53.7087 54.6011 53.1234 54.886L52.5045 55.1877C51.9191 55.4726 51.225 55.2882 50.8487 54.7519L50.1128 53.6961C50.0208 53.5704 49.8619 53.5118 49.7114 53.5537C48.8835 53.8218 48.0221 54.0145 47.144 54.1402C46.9851 54.1654 46.8597 54.2827 46.8346 54.4419L46.6256 55.7156C46.5754 56.0424 46.4081 56.3189 46.1656 56.52C48.4737 57.7853 50.8822 58.4221 53.2153 58.4221C56.3513 58.4221 59.3535 57.2658 61.8038 54.9279C62.1216 54.6262 62.4226 54.3078 62.7237 53.9643C63.3844 53.2017 63.9948 52.347 64.5468 51.3918C74.883 33.51 60.2233 14.388 44.284 12.0334Z" fill="#6FBA1F" fill-opacity="0.3"/>
+                                    <path d="M47.2765 21.9967C46.9754 23.0525 46.6075 24.0748 46.1726 25.0804C45.6625 26.2451 45.0771 27.3763 44.4248 28.4657C44.2576 28.7338 44.0987 29.0103 43.9231 29.2785C43.7474 29.5466 43.5802 29.8148 43.3962 30.0745C43.0366 30.6024 42.6603 31.1136 42.2756 31.6247C41.4895 32.6386 40.6616 33.619 39.7668 34.5492C40.5111 33.5185 41.247 32.4794 41.9327 31.4236C42.2756 30.8957 42.6101 30.3594 42.9363 29.8148C43.2624 29.2785 43.5718 28.7338 43.8645 28.1808C44.4583 27.0747 45.0019 25.9518 45.4702 24.7955C45.8298 23.9156 46.1475 23.0274 46.4235 22.1224C44.9851 22.3319 43.5551 22.5833 42.1335 22.8849C41.6484 22.9855 41.1634 23.086 40.6867 23.195C40.6365 23.3877 40.578 23.5804 40.5195 23.7732C40.4191 24.0832 40.3355 24.3932 40.2184 24.6949C38.4622 29.0774 34.4231 34.0045 35.1423 32.9319C35.8531 31.8593 36.5388 30.77 37.1577 29.6555C37.7932 28.5411 38.3619 27.4015 38.872 26.2367C39.1229 25.6585 39.357 25.0636 39.5661 24.4687C39.6748 24.1754 39.7668 23.8653 39.8672 23.572C39.8839 23.505 39.909 23.438 39.9257 23.3709C38.4455 23.7145 36.9737 24.1 35.5186 24.5189C34.5234 24.8038 33.5283 25.1055 32.5498 25.4239C32.5247 25.8848 32.416 26.3205 32.2739 26.7311C32.0982 27.2339 31.839 27.6947 31.5714 28.1472C31.2871 28.5914 30.9776 29.0187 30.6348 29.4209C30.3003 29.8231 29.9323 30.2086 29.5476 30.5773C29.8487 30.1499 30.1497 29.7226 30.4257 29.2952C30.7017 28.8595 30.9693 28.4238 31.1951 27.9629C31.4292 27.5104 31.6299 27.0495 31.7721 26.5719C31.8724 26.2619 31.9393 25.9434 31.9644 25.6166C31.0027 25.9351 30.041 26.2786 29.1044 26.6389C27.0137 27.4266 24.9732 28.3148 23.0164 29.3287C22.0379 29.8399 21.0846 30.3762 20.1731 30.9627C19.2532 31.5493 18.3751 32.1694 17.5555 32.8565L17.4468 32.756C18.2329 32.0269 19.0859 31.3566 19.9724 30.7281C20.8672 30.0997 21.7954 29.5215 22.7571 28.9684C24.6722 27.8707 26.6876 26.9071 28.7532 26.0272C29.4891 25.7172 30.2417 25.4239 30.9944 25.1306C30.5511 25.0636 30.1079 25.0133 29.6563 24.9798C29.2298 24.9463 28.795 24.9211 28.3601 24.9044C28.1427 24.896 27.9253 24.8876 27.7162 24.8876C27.4988 24.8792 27.2813 24.8792 27.0639 24.8792C26.2025 24.8709 25.3328 24.8876 24.4715 24.9128L21.8707 25.0049C22.707 24.8457 23.5599 24.72 24.4129 24.6279C25.2659 24.5273 26.1356 24.4687 27.0054 24.4351C27.2228 24.4268 27.4402 24.4268 27.6577 24.4184C27.8751 24.41 28.0925 24.4184 28.3183 24.4184C28.5357 24.4184 28.7615 24.4268 28.979 24.4351C29.1964 24.4435 29.4222 24.4603 29.6396 24.4687C30.3923 24.5189 31.1533 24.6111 31.9143 24.7871C32.968 24.4016 34.0384 24.0329 35.1088 23.6894C36.3465 23.2955 37.5925 22.9352 38.8553 22.5917C38.3284 22.4408 37.7932 22.2984 37.258 22.1727C36.221 21.9213 35.1673 21.6867 34.1136 21.5023C33.8544 21.452 33.5868 21.4101 33.3192 21.3682C33.0516 21.3264 32.7923 21.2845 32.5247 21.2426C32.2571 21.2007 31.9979 21.1671 31.7303 21.1336C31.4627 21.1001 31.2034 21.0666 30.9358 21.0331C29.8738 20.9074 28.8117 20.8152 27.7413 20.7398C28.8033 20.6979 29.8654 20.7147 30.9358 20.7733C31.471 20.7984 32.0062 20.8403 32.5415 20.8906C32.8091 20.9158 33.0767 20.9409 33.3443 20.9744L33.7457 21.0247C33.8795 21.0414 34.0133 21.0582 34.1471 21.0833C35.2175 21.2342 36.2879 21.4185 37.35 21.6532C38.2197 21.8459 39.0811 22.0637 39.9341 22.3067C40.5278 22.1559 41.1216 22.0051 41.7237 21.871C43.0868 21.5526 44.4666 21.2509 45.8548 20.9828L45.5705 20.7984L45.3698 20.6644C45.3029 20.6225 45.2276 20.5806 45.1607 20.5387C44.8764 20.3711 44.6004 20.1867 44.3161 20.0359L43.8896 19.7929C43.7474 19.7091 43.5969 19.6337 43.4548 19.5583C42.284 18.9382 41.0547 18.4019 39.817 17.8908C38.571 17.3964 37.3082 16.9271 36.0371 16.4914C34.7659 16.0473 33.4781 15.6199 32.1986 15.1758C33.5115 15.4775 34.8245 15.8127 36.129 16.173C37.4336 16.5417 38.7298 16.9355 40.0093 17.3964C41.2888 17.8489 42.5516 18.3768 43.7725 18.9885C44.8346 19.5164 45.8632 20.1197 46.8249 20.8068C47.4019 20.7063 47.979 20.6057 48.556 20.5135C49.1497 20.4214 49.7519 20.3376 50.354 20.2622C48.949 16.5501 46.0806 13.7597 42.0749 12.5949C41.6317 12.4693 41.1717 12.3603 40.7034 12.2681C39.7501 12.0922 38.7466 12 37.6929 12C17.0371 12 7.83811 34.2894 13.7756 49.2886C13.8091 49.3641 13.8341 49.4395 13.8676 49.5065C13.7171 47.7971 13.876 46.1128 14.3526 44.4956C14.8795 42.694 15.7827 41.0181 17.0287 39.5098C18.2664 38.0099 19.8218 36.7194 21.6365 35.6636C23.9948 34.2978 26.6541 33.5771 29.3135 33.5688C29.3218 33.5688 29.3218 33.5688 29.3302 33.5688C29.3386 33.5688 29.3386 33.5688 29.3469 33.5688C31.8892 33.5688 34.3896 34.2307 36.589 35.4793C37.5674 36.0323 38.479 36.7111 39.3069 37.482C39.6246 37.7836 39.9341 38.0937 40.2351 38.4289C40.486 38.7054 40.7202 38.9903 40.946 39.2836C47.0507 37.8339 51.3408 32.3621 51.3408 25.8345C51.3408 24.343 51.1568 22.9268 50.7972 21.6029C50.17 21.6699 49.5428 21.7369 48.9239 21.8124C48.372 21.8543 47.8201 21.9297 47.2765 21.9967Z" fill="#6FBA1F"/>
+                                </svg>
                             </div>
-                            <a class="fz-15 link-underline" href="blog-item.html">Подробнее</a>
-                        </div>
-                        <div class="col-md-4">
-                            <img class="img-fluid mb-4" src="images/icons/eco-03.svg" alt="">
-                            <div class="mb-5">
-                                <p class="fz-17">Цели ГрейнХолдинг в области устойчивого развития</p>
+                            <div class="card-body">
+                                <p class="card-title">Цели ГрейнХолдинг в области устойчивого развития</p>
                             </div>
-                            <a class="fz-15 link-underline" href="blog-item.html">Подробнее</a>
+                            <div class="card-footer">
+                                <div class="d-inline-flex gap-2 align-items-center">
+                                    <a class="card-link" href="blog-item.html">Подробнее</a>
+                                    <svg class="svg-icon title-link-arrow" width="39" height="40">
+                                        <use xlink:href="css/sprite.svg#title-link-arrow"></use>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -169,44 +475,88 @@
             </div>
         </section>
 
-        <!-- Наша социальная ответственность -->
+        <!-- Responsibility -->
         <section class="section">
             <div class="container">
-                <div class="mb-25">
-                    <div class="row g-4">
-                        <div class="col-lg-8">
-                            <h2 class="ff-title mb-0">Наша социальная ответственность</h2>
+                
+                <div class="section-heading">
+                    <h2 class="section-title">Наша социальная ответственность</h2>
+                </div>
+
+                <div class="row gy-5">
+                    <div class="col-md-4">
+                        <div class="card card-responsibility">
+                            <div class="card-svg-wrapper">
+                                <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                    <path d="M21.6002 59.0933C21.7069 58.6667 21.7602 58.1867 21.8669 57.76C22.2935 56 23.4135 54.72 25.0135 53.92C26.1869 53.28 27.4669 52.8533 28.6402 52.2667C29.3869 51.8933 30.1335 51.52 30.8802 51.0933C31.3069 50.8267 31.5202 50.4533 31.4669 49.92C31.4669 49.8667 31.4669 49.8133 31.4669 49.76C31.5202 48.8 31.5202 47.84 30.7735 47.04C30.6135 46.88 30.5602 46.56 30.4535 46.3467C30.1335 45.6 29.8669 44.8533 29.3335 44.16C28.5869 43.2 28.4269 42.0267 29.0135 40.8533C29.1202 40.6933 29.0669 40.3733 29.0135 40.16C28.6935 38.6133 28.4802 37.0667 28.7469 35.4667C29.2269 32.5867 31.1469 30.7733 34.0802 30.5067C35.1469 30.4 36.2135 30.4533 37.2269 30.6133C37.8135 30.72 38.3469 31.1467 38.8802 31.4667C38.9869 31.52 39.0935 31.6267 39.2535 31.68C41.3869 32.2133 42.3469 33.92 42.5069 35.8933C42.6669 37.3333 42.4535 38.7733 42.0802 40.2133C42.0269 40.48 42.0269 40.8 42.1335 41.0133C42.6135 42.08 42.2402 43.84 41.3869 44.64C41.2269 44.8 41.0669 45.0667 40.9602 45.28C40.5869 46.1333 40.1602 46.9333 39.7869 47.7867C39.7335 47.9467 39.6269 48.16 39.6269 48.32C39.6269 48.8533 39.6269 49.3333 39.6269 49.8667C39.5735 50.3467 39.7869 50.7733 40.1602 50.9867C40.8002 51.4133 41.4935 51.7867 42.2402 52.1067C43.6269 52.7467 45.0669 53.28 46.4002 54.08C48.5335 55.3067 49.4935 57.28 49.4402 59.84C49.2802 59.84 49.0669 59.8933 48.9069 59.8933C39.9469 59.8933 30.9869 59.8933 22.0269 59.8933C21.8669 59.8933 21.7069 59.84 21.5469 59.84C21.6002 59.5733 21.6002 59.36 21.6002 59.0933Z" fill="#6FBA1F" fill-opacity="0.3"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M53.9729 13.0442L53.9727 13.0441C53.3925 12.6655 52.8058 12.2827 52.2127 11.8935C52.9594 9.28016 54.4527 6.98683 56.3194 4.96016C56.8527 4.3735 57.7061 4.3735 58.2927 5.0135C59.9461 6.9335 61.3327 8.96016 62.1327 11.4135C62.1861 11.6802 62.0794 12.1602 61.8661 12.3202C61.406 12.5962 60.9504 12.8678 60.4979 13.1375L60.4972 13.138L60.4971 13.138L60.4971 13.138L60.4971 13.138L60.4971 13.138L60.4969 13.1381L60.4969 13.1381L60.4965 13.1384L60.4963 13.1385C59.3756 13.8066 58.2742 14.4632 57.1727 15.1468C56.1289 14.4509 55.0623 13.755 53.9731 13.0443L53.9729 13.0442ZM54.6939 54.743H54.694C55.0613 54.767 55.4267 54.7908 55.786 54.8267C55.786 54.1492 55.8028 53.4632 55.8198 52.7722V52.7722V52.7722V52.7721V52.7721V52.7721V52.772V52.772V52.772V52.7719V52.7718V52.7717V52.7716V52.7716V52.7715V52.7714V52.7713C55.8455 51.722 55.8715 50.661 55.8394 49.6C55.6794 46.0267 53.0127 42.72 49.5994 41.7067C48.5327 41.3867 47.786 41.5467 47.466 42.6667C47.0394 44.0534 46.666 45.4934 46.666 46.88C46.7194 50.9334 48.906 53.76 52.5327 54.5067C53.24 54.6482 53.9708 54.6958 54.6939 54.743ZM58.5259 53.117C58.5232 53.6684 58.5206 54.2209 58.506 54.7734C58.666 54.7734 58.826 54.7793 58.986 54.7852C59.306 54.7971 59.626 54.8089 59.946 54.7734C66.1327 54.6134 69.8127 48.3734 67.0927 42.7734C66.506 41.6 65.9727 41.3334 64.7994 41.76C61.4394 42.9334 59.306 45.28 58.7727 48.7467C58.5399 50.1821 58.5329 51.6457 58.5259 53.117ZM58.5593 42.8801C62.2926 39.3601 64.6926 38.4002 67.5726 39.3601C67.9993 37.2268 67.946 35.2002 66.986 33.2802C66.5593 32.4268 65.9726 32.1068 65.0126 32.4268C63.0926 33.0135 61.386 33.9202 59.8393 35.1468C58.9326 35.8935 58.3993 36.6935 58.5593 37.9201C58.6302 38.487 58.6069 39.0304 58.5832 39.5815L58.5832 39.5816C58.5713 39.86 58.5593 40.1404 58.5593 40.4268V42.8801ZM55.8927 42.7733C53.2794 40.3733 50.7194 38.2934 46.8794 39.2533C46.4527 37.1734 46.5594 35.0934 47.6261 33.12C47.9994 32.4267 48.586 32.16 49.386 32.4267C51.6794 33.12 53.706 34.1867 55.4127 35.8934C55.626 36.1067 55.8927 36.4267 55.8927 36.6934V42.7733ZM63.5727 20.8534C64.8527 20.32 66.1327 20.16 67.5727 20.9067C67.9461 18.6667 67.8927 16.6934 66.9327 14.7734C66.5594 13.9734 65.9727 13.6 65.0661 13.8667C62.7727 14.56 60.7461 15.6267 59.0394 17.3334C58.8261 17.5467 58.5594 17.8134 58.5594 18.0267V23.2534C58.9752 23.0518 59.382 22.8532 59.7828 22.6575L59.7879 22.655L59.7908 22.6536L59.7913 22.6534L59.7915 22.6533C61.0839 22.0223 62.3128 21.4224 63.5727 20.8534ZM67.5727 30.0268C64.5726 29.1444 62.3389 30.4519 60.0263 31.8055L60.0262 31.8056L60.0262 31.8056C59.5432 32.0883 59.0569 32.373 58.5594 32.6402V27.3068C58.5594 27.0935 58.7727 26.8802 58.9861 26.6668C60.6927 24.9068 62.8261 23.7868 65.1194 23.0935C65.9727 22.8268 66.5594 23.2002 66.9327 23.9468C67.9461 25.9202 67.9994 27.9468 67.5727 30.0268ZM46.8793 20.7467C49.3326 20 51.1993 20.48 55.8926 23.4134C55.8926 21.6 55.8926 19.8934 55.8393 18.1334C55.8393 17.8667 55.5726 17.4934 55.3593 17.28C53.706 15.6267 51.6793 14.56 49.4393 13.8667C48.586 13.6 47.946 13.8667 47.5193 14.6667C46.5593 16.64 46.4526 18.6667 46.8793 20.7467ZM46.8794 30.0267C46.4527 28.0534 46.5594 26.1334 47.3594 24.2667C47.8927 23.0934 48.4261 22.88 49.6527 23.2534C51.7861 23.8934 53.7061 24.96 55.3061 26.56C55.6261 26.88 55.8394 27.36 55.8394 27.7867C55.8748 28.8495 55.8632 29.9122 55.8514 30.9906V30.9907V30.9907C55.8454 31.5358 55.8394 32.0849 55.8394 32.64C55.3599 32.3777 54.8881 32.0969 54.4177 31.817L54.4177 31.817C52.1151 30.4467 49.8466 29.0967 46.8794 30.0267ZM58.5593 59.8935C58.5593 59.8935 58.506 56.9601 58.506 54.7201C57.9015 54.7912 57.2971 54.8149 56.6927 54.8387C56.3904 54.8505 56.0882 54.8624 55.786 54.8801H55.8393C55.8926 55.2001 55.946 55.5735 55.946 55.8935V59.8935H58.5593Z" fill="#6FBA1F"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M45.28 32.7466L44.8 30.4533C44.2667 27.8933 44.48 25.5466 45.44 23.4133L45.28 23.4666L44.8 21.1733C44.32 18.8266 44.48 16.6933 45.1733 14.7733C45.0133 14.7733 44.8533 14.7199 44.6933 14.6666C44.6933 13.7535 44.6798 11.5421 44.6664 9.34682L44.6664 9.34445C44.6531 7.18089 44.64 5.03336 44.64 4.15993C41.1733 3.89326 33.44 3.99993 32.2133 4.31993C32.2133 4.63955 32.2148 5.27843 32.2168 6.13075C32.2267 10.3984 32.2489 20.0173 32.16 21.7066C31.7763 21.7066 31.405 21.7129 31.0442 21.7189H31.0441H31.0441C30.3518 21.7306 29.6977 21.7417 29.0667 21.7066C28.7297 21.6889 28.3927 21.7006 28.0537 21.7124C27.3734 21.7362 26.6853 21.7602 25.9733 21.5466V15.6266C25.12 15.1199 24.28 14.5999 23.44 14.0799C22.6 13.5599 21.76 13.0399 20.9067 12.5333C20.2979 12.9137 19.7028 13.2806 19.1139 13.6436L19.1139 13.6436L19.1139 13.6436C18.0518 14.2983 17.0103 14.9404 15.9467 15.6266C15.9238 17.2034 15.9303 18.7607 15.9369 20.3193V20.3193V20.3194C15.9456 22.3983 15.9543 24.4796 15.8933 26.6133H12L12.16 59.8399H18.9333V59.0933V58.8266L18.9867 58.5599C18.9867 58.5066 19 58.44 19.0133 58.3733L19.0133 58.3733C19.0267 58.3066 19.04 58.2399 19.04 58.1866C19.0487 58.1347 19.0573 58.0813 19.0662 58.0266C19.112 57.744 19.164 57.424 19.2533 57.0666C19.8933 54.6666 21.44 52.7466 23.7333 51.5199C24.5333 51.0933 25.3867 50.7199 26.1867 50.3999C26.3627 50.3217 26.5316 50.2506 26.6959 50.1815L26.696 50.1814C26.9797 50.062 27.2498 49.9483 27.52 49.8133L28.8 49.1733V48.7466C28.3445 48.2405 28.1771 47.7343 28.0701 47.4105L28.0533 47.3599L28 47.2533L27.9467 47.1999C27.7333 46.6133 27.52 46.1333 27.2533 45.7599C25.9733 44.1599 25.7067 42.1333 26.3467 40.2666C26.08 38.7733 25.8133 36.9599 26.1333 34.9866C26.8267 30.8799 29.7067 28.2133 33.8667 27.8399C34.2933 27.7866 34.72 27.7866 35.2 27.7866C36 27.7866 36.8533 27.8399 37.7067 27.9999C38.6434 28.1561 39.3263 28.5661 39.8543 28.8832L39.8933 28.9066C39.9558 28.9691 40.0366 29.0133 40.1035 29.0499C40.1509 29.0757 40.1912 29.0978 40.2133 29.1199C40.24 29.1466 40.2667 29.1599 40.2933 29.1733C40.32 29.1866 40.3467 29.1999 40.3733 29.2266C42.6667 29.9199 44.32 31.6799 44.96 34.0799C45.12 33.5999 45.28 33.1199 45.4933 32.6933L45.28 32.7466ZM63.1467 56.3732L61.3867 56.7999C61.28 56.8266 61.16 56.8399 61.04 56.8532L61.0399 56.8533C60.92 56.8666 60.8 56.8799 60.6934 56.9066V59.8933H68V52.9066C66.7734 54.5066 65.0667 55.7332 63.1467 56.3732ZM45.4933 41.9467C45.48 41.9867 45.4667 42.0267 45.44 42.08C44.96 43.4667 44.5333 45.1733 44.5333 46.9333C44.5333 48.2133 44.7467 49.44 45.12 50.5067C45.0667 50.48 45.0267 50.4667 44.9867 50.4533C44.9467 50.44 44.9067 50.4267 44.8533 50.4C44.32 50.1867 43.84 49.9733 43.4133 49.76C43.04 49.6 42.6667 49.44 42.3467 49.2267V49.0667V48.8533C42.5467 48.3333 42.8367 47.7233 43.1267 47.1133C43.2234 46.91 43.32 46.7067 43.4133 46.5067V46.4533C44.8533 44.96 45.44 42.4 44.8 40.4267C44.8 40.3733 44.8133 40.3333 44.8267 40.2933C44.84 40.2533 44.8533 40.2133 44.8533 40.16L45.2267 41.8667L45.5467 41.8133C45.52 41.8667 45.5067 41.9067 45.4933 41.9467Z" fill="#6FBA1F" fill-opacity="0.3"/>
+                                </svg>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-title">Крупный работодатель в пищевом секторе</p>
+                                <p class="card-description">Ежегодно мы создаем тысячи новых рабочих мест, создаем возможности для профессионального роста и успешной карьеры, обеспечиваем сотрудникам достойную заработную плату и гарантируем выполнение всех социальных гарантий</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-inline-flex gap-2 align-items-center">
+                                    <a class="card-link" href="blog-item.html">Подробнее</a>
+                                    <svg class="svg-icon title-link-arrow" width="39" height="40">
+                                        <use xlink:href="css/sprite.svg#title-link-arrow"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-responsibility">
+                            <div class="card-svg-wrapper">
+                                <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                    <path d="M31.6051 32.4771C27.6632 30.2915 23.7408 28.1058 19.7793 25.9202C20.1501 25.2372 20.5209 24.5737 20.8916 23.8907C22.082 21.7636 23.2529 19.617 24.4628 17.5094C25.1653 16.2605 26.0435 15.1481 27.2144 14.309C28.0925 13.665 29.0487 13.3138 30.1806 13.3333C34.5323 13.4113 38.8646 13.4309 43.2163 13.4894C44.0359 13.4894 44.8555 13.4894 45.6751 13.4894C45.6751 13.5284 45.6751 13.548 45.6947 13.587C45.6166 13.6065 45.5581 13.626 45.48 13.6455C42.8455 14.3285 40.9526 15.9678 39.6451 18.3095C36.9912 22.9345 34.3762 27.5789 31.7612 32.2039C31.7222 32.2819 31.6637 32.36 31.6051 32.4771Z" fill="#6FBA1F" fill-opacity="0.3"/>
+                                    <path d="M49.9688 38.429C53.7741 36.0482 57.5794 33.6869 61.4043 31.3062C61.4628 31.4037 61.5214 31.4623 61.5604 31.5403C63.1216 34.0382 64.6827 36.5556 66.2439 39.0534C67.044 40.3414 67.6685 41.6879 67.9222 43.1905C68.0588 44.0101 68.0393 44.8102 67.7856 45.6103C67.7465 45.7469 67.688 45.9031 67.6099 46.0397C65.034 50.6061 62.4386 55.1725 59.8431 59.7389C59.8041 59.817 59.7651 59.8755 59.687 59.934C59.7651 59.5242 59.8626 59.1144 59.9212 58.7046C60.2334 56.7141 59.8822 54.8212 58.9259 53.0844C58.2624 51.8355 57.4623 50.6646 56.7208 49.4547C54.5156 45.864 52.3105 42.2929 50.1249 38.7022C50.0858 38.6046 50.0273 38.5265 49.9688 38.429Z" fill="#6FBA1F" fill-opacity="0.3"/>
+                                    <path d="M44.1329 29.6084C44.0744 29.4913 44.0354 29.4133 43.9963 29.3352C42.5913 26.8568 41.1862 24.359 39.7812 21.8806C39.6641 21.6855 39.6641 21.5294 39.7812 21.3342C40.6008 20.0853 41.3619 18.8168 42.24 17.6069C43.4889 15.8701 45.2453 14.9334 47.3528 14.6602C48.6018 14.4846 49.8312 14.6407 50.8264 15.5189C51.0996 15.7531 51.3533 16.0458 51.568 16.358C52.895 18.329 54.1829 20.2999 55.4904 22.2904C55.549 22.388 55.627 22.4856 55.6856 22.5832C57.0711 21.9977 58.4176 21.4318 59.8422 20.8268C59.8031 20.9244 59.7836 21.0025 59.7446 21.061C57.7931 24.6322 55.8612 28.1838 53.9097 31.755C53.8317 31.9111 53.7341 31.9697 53.5585 31.9697C49.4019 31.9111 45.2648 31.8526 41.1082 31.794C41.0106 31.794 40.913 31.7745 40.7959 31.716C41.9278 30.9744 43.0206 30.2914 44.1329 29.6084Z" fill="#6FBA1F"/>
+                                    <path d="M46.9428 64.2079C46.7867 65.691 46.6306 67.1156 46.4745 68.6182C46.3769 68.4816 46.3184 68.4036 46.2793 68.3255C44.1327 64.9885 42.0057 61.6515 39.8591 58.295C39.7615 58.1389 39.742 58.0023 39.8395 57.8462C41.9081 54.197 43.9571 50.5672 46.0257 46.918C46.0647 46.8595 46.1037 46.8009 46.1818 46.6838C46.2403 47.601 46.2989 48.4402 46.3769 49.2988C46.3964 49.6696 46.4355 50.0403 46.4355 50.4111C46.4355 50.6063 46.533 50.6648 46.7282 50.6648C49.5578 50.6258 52.3874 50.6063 55.217 50.5672C55.4902 50.5672 55.6658 50.6258 55.822 50.8795C56.6611 52.265 57.5002 53.6701 58.0661 55.1922C58.8467 57.2998 58.6516 59.3683 57.6563 61.3588C56.9343 62.7834 55.7439 63.5444 54.1242 63.6225C52.5045 63.7006 50.9043 63.8762 49.2846 63.9933C48.6796 64.0323 48.0552 64.0713 47.4502 64.1299C47.2746 64.1689 47.1185 64.1884 46.9428 64.2079Z" fill="#6FBA1F"/>
+                                    <path d="M16.2285 53.1822C14.4917 49.9623 14.3356 45.513 15.0966 41.3759C15.8577 37.2388 17.0676 33.3164 18.7654 29.55C26.3175 32.2821 32.6207 41.9613 28.4056 51.0161C28.1714 51.504 27.9568 51.9918 27.6445 52.4992C23.566 49.6696 21.8487 45.5715 20.6193 41.1612C18.6873 49.2598 23.2342 54.8019 28.5617 58.3731C29.4008 58.939 32.8354 60.6368 32.8354 60.6368C32.8354 60.6368 35.1967 61.632 37.5189 62.881C38.1434 63.2127 38.5337 64.6373 31.6645 63.4274C29.1862 62.9785 25.0881 61.2027 24.1709 60.6953C19.8582 58.3341 17.9848 56.4021 16.2285 53.1822Z" fill="#212529"/>
+                                </svg>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-title">Использование биоразлагаемой упаковки</p>
+                                <p class="card-description">Мы создали в России новый центр компетенций в области производства специализированного мясного скота и выстроили уникальную систему профессионального обучения профильных специалистов всех направлений в рамках вертикально-интегрированного производства мяса «от поля до прилавка»</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-inline-flex gap-2 align-items-center">
+                                    <a class="card-link" href="blog-item.html">Подробнее</a>
+                                    <svg class="svg-icon title-link-arrow" width="39" height="40">
+                                        <use xlink:href="css/sprite.svg#title-link-arrow"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-responsibility">
+                            <div class="card-svg-wrapper">
+                                <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                    <path d="M57.5519 5.70887C54.4972 5.32077 51.7178 5.03282 48.951 5.85911C46.0214 6.73548 44.1059 8.60089 42.9416 11.3302C42.3782 12.6197 42.0652 14.0344 41.7147 15.4366C41.4768 16.2253 41.4017 17.0892 41.1889 18.2034C39.4862 15.7621 37.458 14.0594 34.9541 12.9076C32.4502 11.7558 29.8962 10.9045 27.2295 10.3536C25.8148 15.2237 28.5942 22.0594 35.0543 23.2863C35.4048 23.3489 35.7554 23.4241 36.1435 23.4491C36.181 20.3067 34.6411 17.9029 32.7507 15.6244C36.9447 17.327 39.3735 21.0579 39.4361 24.5133L41.5394 26.4914C41.6896 25.7277 41.8399 24.9014 41.8774 24.7511C42.3782 22.1345 42.7663 19.4554 43.4674 16.8763C44.469 13.0829 46.9228 10.5539 50.9416 9.65254C48.4502 11.8059 46.5347 14.2723 46.2092 17.64C46.6849 17.8529 47.1732 18.0281 47.6364 18.1158C49.8774 18.5414 52.3187 17.7402 54.0339 15.8748C55.0856 14.7605 55.8493 13.471 56.325 12.0438C56.6756 11.0672 56.8633 10.0406 57.0637 9.00152C57.2389 7.99995 57.3641 6.94831 57.5519 5.70887Z" fill="#6FBA1F"/>
+                                    <path d="M66.0534 31.3739C65.0018 27.3551 62.6856 24.3254 58.9172 22.4349C56.3132 21.1329 53.659 20.1188 50.6794 20.219C48.4759 20.2941 46.4102 20.7573 44.4572 21.6713C44.382 22.1094 44.2944 22.5351 44.2193 22.9608C44.1066 23.6243 43.9814 24.3004 43.8562 24.9639C46.7983 27.931 49.7279 30.8982 52.6825 33.8653C54.1223 35.3051 54.886 37.0328 54.5855 39.0609C54.2975 41.014 53.1207 42.3786 51.2678 43.0296C49.3022 43.7182 47.3993 43.4678 45.8343 42.0155C43.9439 40.2503 42.1285 38.3974 40.2881 36.5821C39.0612 35.3677 37.8218 34.1407 36.5949 32.9263C36.4446 32.7886 36.2944 32.6509 35.9564 32.3254C35.3805 32.9889 34.8547 33.665 34.2537 34.2659C29.8593 38.6853 25.4525 43.0672 21.0456 47.4615C20.2568 48.2378 20.019 49.1767 20.3445 50.2159C20.6575 51.1924 21.296 51.8684 22.3351 52.0938C23.3617 52.3066 24.1629 51.8684 24.864 51.1673C27.3179 48.726 29.7717 46.2847 32.2381 43.8434C33.8406 42.2534 35.4306 40.6634 37.0331 39.086C37.7717 38.3598 38.598 38.4349 39.224 39.2487C39.5495 39.6619 39.5996 40.0875 39.2866 40.5132C39.1113 40.7636 38.886 40.9889 38.6606 41.2143C34.8296 45.0578 30.9861 48.8888 27.1551 52.7198C27.0174 52.8575 26.8922 52.9827 26.7545 53.1204C25.5902 54.3223 25.5151 55.9123 26.5667 56.9639C27.6809 58.0781 29.4462 58.0656 30.598 56.9013C34.2913 53.183 37.972 49.4522 41.6528 45.7339C42.0659 45.3207 42.4665 44.895 42.9047 44.5069C43.5057 43.9811 43.9814 44.0312 44.5949 44.6321C45.2334 45.2581 45.3085 45.7964 44.8327 46.3849C44.6575 46.5977 44.4572 46.7855 44.2694 46.9733C40.3507 50.9044 36.4196 54.8231 32.501 58.7542C31.3867 59.881 31.2991 61.521 32.2756 62.5727C33.2772 63.6619 34.9924 63.7119 36.0941 62.6728C36.7326 62.0719 37.3335 61.4334 37.9595 60.8199C41.4274 57.352 44.8953 53.8841 48.3633 50.4162C49.0644 49.7151 49.6027 49.7276 50.2788 50.4412C50.9172 51.1173 50.9047 51.6055 50.1911 52.3191C46.1849 56.3379 42.1661 60.3442 38.1598 64.363C36.8703 65.665 36.9454 67.568 38.3226 68.557C38.598 68.7573 38.936 68.8825 39.249 69.0453C39.6622 69.0453 40.0878 69.0453 40.501 69.0453C41.127 68.582 41.828 68.2065 42.3789 67.6556C48.7889 61.2831 55.1363 54.8356 61.5964 48.5007C64.7514 45.3958 66.1661 41.6274 66.5542 37.3457C66.5792 37.0954 66.6293 36.8575 66.6669 36.6196C66.6669 36.0312 66.6669 35.4553 66.6669 34.8669C66.4665 33.7026 66.3414 32.5132 66.0534 31.3739Z" fill="#212529"/>
+                                    <path d="M40.1509 27.9562L38.0476 25.9781L37.6595 25.615L35.9568 25.4648C35.4686 25.4147 35.0429 25.3396 34.6673 25.2645C31.5124 24.6635 28.8207 22.8607 27.0304 20.1565C21.3715 20.6823 15.9255 24.1252 14.0852 30.698C13.7346 31.9374 13.5844 33.2269 13.334 34.4914C13.334 35.3302 13.334 36.1565 13.334 36.9953C13.3715 37.2582 13.4341 37.5211 13.4592 37.784C13.6845 40.2754 14.1478 42.7042 15.3622 44.9202C15.8629 45.8341 16.5265 46.6604 17.2025 47.662C23.6251 41.2394 29.8974 34.9671 36.1947 28.6698C36.3199 28.795 36.4576 28.9202 36.5953 29.0454C40.0758 32.5258 43.5437 36.0188 47.0241 39.4992C47.262 39.7371 47.4874 39.9875 47.7503 40.1878C48.6517 40.8639 49.6407 40.939 50.6423 40.4507C51.6188 39.975 52.0445 39.1236 52.032 38.0469C52.032 37.2207 51.6438 36.5822 51.0805 36.0188C48.4764 33.4147 45.8598 30.8232 43.2557 28.2191L42.8301 30.4601L40.1509 27.9562Z" fill="#6FBA1F" fill-opacity="0.3"/>
+                                </svg>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-title">Благотворительность</p>
+                                <p class="card-description">Мы активно участвуем в социальной жизни регионов, помогая сельским школам и детским домам, развитию детского и юношеского спорта, районных медицинских учреждений, организаций инвалидов</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-inline-flex gap-2 align-items-center">
+                                    <a class="card-link" href="blog-item.html">Подробнее</a>
+                                    <svg class="svg-icon title-link-arrow" width="39" height="40">
+                                        <use xlink:href="css/sprite.svg#title-link-arrow"></use>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="py-4">
-                    <div class="row g-4">
-                        <div class="col-md-4">
-                            <img class="img-fluid mb-4" src="images/icons/social-01.svg" alt="">
-                            <div class="mb-5">
-                                <p class="fz-17">Крупный работодатель в пищевом секторе</p>
-                                <p class="">Мы предлагаем работу на современном оборудовании, стабильную зарплату и перспективы карьерного роста.</p>
-                            </div>
-                            <a class="fz-15 link-underline" href="blog-item.html">Подробнее</a>
-                        </div>
-                        <div class="col-md-4">
-                            <img class="img-fluid mb-4" src="images/icons/social-02.svg" alt="">
-                            <div class="mb-5">
-                                <p class="fz-17">Забота об окружающей среде</p>
-                                <p class="">В нашей продукции мы используем только качественное и экологичное сырье и биоразлагаемую упаковку.</p>
-                            </div>
-                            <a class="fz-15 link-underline" href="blog-item.html">Подробнее</a>
-                        </div>
-                        <div class="col-md-4">
-                            <img class="img-fluid mb-4" src="images/icons/social-03.svg" alt="">
-                            <div class="mb-5">
-                                <p class="fz-17">Благотворительность</p>
-                                <p class="">Холдинг регулярно оказывает меры поддержки для социально незащищенных групп населения.</p>
-                            </div>
-                            <a class="fz-15 link-underline" href="blog-item.html">Подробнее</a>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </section>
 
@@ -215,138 +565,141 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="border-1 border-top border-bottom py-4">
-                <div class="row align-items-center g-4">
-                    <div class="col-lg-4">
+            <div class="footer-top">
+                <div class="row gy-4 align-items-center">
+                    <div class="col-lg-4 text-center text-lg-start">
                         <p class="mb-0">Обратная связь</p>
-                        <p class="ff-title fz-17">Заказать звонок</p>
+                        <p class="ff-title fs-4 mb-0">Заказать звонок</p>
                     </div>
                     <div class="col-lg-4">
-                        <form class="d-flex" action="#" method="post">
-                            <input type="text" class="form-control me-2" placeholder="Номер телефона">
+                        <form class="d-flex gap-3" action="#">
+                            <input type="text" class="form-control" placeholder="Номер телефона">
                             <button type="submit" class="btn btn-primary">
-                                <img src="images/icons/phone-white.svg" alt="">
+                                <svg class="svg-icon icon-phone" width="18" height="18">
+                                    <use xlink:href="css/sprite.svg#icon-phone"></use>
+                                </svg>
                             </button>
                         </form>
                     </div>
-                    <div class="col-lg-4 text-lg-end">
+                    <div class="col-lg-4 text-center text-lg-end">
                         <p class="mb-0">Горячая линия:</p>
-                        <p class="ff-title fz-17">
+                        <p class="ff-title fs-4 mb-0">
                             <a href="tel:88002002990">8 800 200 29 90</a>
                         </p>
                     </div>
                 </div>
             </div>
-
-            <div class="py-5">
-                <div class="row g-4">
+            <div class="footer-middle">
+                <div class="footer-widget">
+                    <div class="custom-html-widget">
+                        <img class="footer-logo" src="images/logo-footer.svg" alt="IMG-LOGO">
+                    </div>
+                </div>
+                <div class="row gy-4">
                     <div class="col-lg-6">
-                        <a class="d-block hover-opacity mb-5" href="#">
-                            <img src="images/logo-footer.svg" alt="IMG-LOGO">
-                        </a>
                         <div class="row">
                             <div class="col-6">
-                                <ul class="nav flex-column sidebar-nav">
-                                    <li class="nav-item"><a class="nav-link" href="#">Бренды</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Пресс-центр</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Где купить?</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Партнерам</a></li>
-                                </ul>
+                                <div class="footer-widget">
+                                    <ul class="menu">
+                                        <li><a href="#">Бренды</a></li>
+                                        <li><a href="#">Пресс-центр</a></li>
+                                        <li><a href="#">Где купить?</a></li>
+                                        <li><a href="#">Партнерам</a></li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="col-6">
-                                <ul class="nav flex-column sidebar-nav">
-                                    <li class="nav-item"><a class="nav-link" href="#">Акции</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Вакансии</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Устойчивое развитие</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 text-lg-end">
-                        <div class="mb-5">
-                            <div class="row">
-                                <div class="col-lg-6 ms-auto">
-                                    <select class="form-select">
-                                        <option selected="">Подольск</option>
-                                        <option value="1">Москва</option>
-                                        <option value="2">Санкт-Петербург</option>
-                                        <option value="3">Казань</option>
-                                    </select>
+                                <div class="footer-widget">
+                                    <ul class="menu">
+                                        <li><a href="#">Акции</a></li>
+                                        <li><a href="#">Вакансии</a></li>
+                                        <li><a href="#">Устойчивое развитие</a></li>
+                                        <li><a href="#">Контакты</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <p>Московская область, г. Подольск, ул. Лобачева, 19</p>
-                        <p><a href="tel:+74956482949">+7 495 648-29-49</a></p>
-                        <p><a href="mailto:info@grainholding.ru">info@grainholding.ru</a></p>
+                    </div>
+                    <div class="col-lg-6 text-lg-end">
+                        <div class="footer-widget">
+                            <div class="custom-html-widget">
+                                <p>Московская область, г. Подольск, ул. Лобачева, 19</p>
+                                <p><a href="tel:+74956482949">+7 495 648-29-49</a></p>
+                                <p><a href="mailto:info@grainholding.ru">info@grainholding.ru</a></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="py-4">
-                <div class="row g-4">
-                    <div class="col-lg-6">
-                        <p>© 2018 Группа компаний «Грейн Холдинг»</p>
-                        <style>
-                            .startsite {
-                                display: inline-block;
-                                padding-left: 45px;
-                                width: 195px;
-                                height: 35px;
-                                line-height: 18px;
-                                font-size: 14px;
-                                background: url('images/icons/startsite-logo1.svg') left center no-repeat;
-                                background-size: contain;
-                                -webkit-filter: grayscale(100%) brightness(0%) opacity(50%);
-                                filter: grayscale(100%) brightness(0%) opacity(50%);
-                            }
-                        </style>
-                        <a class="startsite" href="https://startsite.studio" target="_blank" rel="noopener">Дизайн и разработка сайта — «СтартСайт»</a>
-                    </div>
+            <div class="footer-bottom">
+                <div class="row">
                     <div class="col-lg-6 text-lg-end">
-                        <ul class="nav justify-content-lg-end">
-                            <li class="nav-item hover-opacity">
-                                <a class="nav-link" href="#">
-                                    <img src="images/icons/social-vk.svg" alt="">
+                        <ul class="social-menu">
+                            <li>
+                                <a href="#">
+                                    <svg class="svg-icon social-facebook" width="12" height="20">
+                                        <use xlink:href="css/sprite.svg#social-facebook"></use>
+                                    </svg>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link hover-opacity" href="#">
-                                    <img src="images/icons/social-youtube.svg" alt="">
+                            <li>
+                                <a href="#">
+                                    <svg class="svg-icon social-insta" width="20" height="20">
+                                        <use xlink:href="css/sprite.svg#social-insta"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg class="svg-icon social-twitter" width="22" height="19">
+                                        <use xlink:href="css/sprite.svg#social-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg class="svg-icon social-vk" width="24" height="16">
+                                        <use xlink:href="css/sprite.svg#social-vk"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg class="svg-icon social-youtube" width="22" height="16">
+                                        <use xlink:href="css/sprite.svg#social-youtube"></use>
+                                    </svg>
                                 </a>
                             </li>
                         </ul>
+                    </div>
+                    <div class="col-lg-6 text-center text-lg-start order-lg-first">
+                        <p class="copyright-text">© 2018 Группа компаний «Грейн Холдинг»</p>
+                        <style>
+                            .startsite-label {
+                                display: inline-flex;
+                                gap: 12px;
+                                text-align: left;
+                                line-height: 19px;
+                                font-size: 14px;
+                                -webkit-filter: grayscale(100%) brightness(0%) opacity(50%);
+                                filter: grayscale(100%) brightness(0%) opacity(50%);
+                            }
+                            .startsite-label img {
+                                flex-shrink: 0;
+                                max-width: 100%;
+                                height: auto;
+                                width: 35px;
+                            }
+                        </style>
+                        <a href="https://startsite.studio" class="startsite-label" target="_blank" rel="noopener">
+                            <img src="images/startsite-logo1.svg" alt="Веб студия СтартСайт">
+                            <span>Дизайн и разработка<br> сайта — «СтартСайт»</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-
-    <!-- Back Top -->
-    <button type="button" class="btn btn-icon btn-primary back-top" id="back-top">
-        <i class="icon icon-link" style="transform: rotate(-45deg);"></i>
-    </button>
-
-    <!-- Modal Search -->
-    <div class="modal-search js-search-close">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="modal-wrap position-relative">
-                        <button type="button" class="btn-modal-close hover-opacity js-search-close">
-                            <i class="icon icon-x_big"></i>
-                        </button>
-                        <form class="form-search d-flex">
-                            <button type="button" class="hover-opacity">
-                                <i class="icon icon-search"></i>
-                            </button>
-                            <input type="text" name="search" placeholder="Поиск">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
