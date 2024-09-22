@@ -533,11 +533,12 @@ label {
 }
 
 .inline-icon {
+  vertical-align: baseline;
   transition: 0.3s ease;
 }
 
 a:hover ~ .inline-icon {
-  transform: translate(6px, -6px);
+  transform: translate(4px, -4px);
 }
 
 @media screen and (min-width: 992px) {
@@ -837,14 +838,22 @@ a:hover ~ .inline-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   padding: 0;
-  border: none;
+  border-color: #dee2e6;
 }
 
-.mobile-menu li.dropdown-active .btn-dropdown {
+.mobile-menu .btn-dropdown .svg-icon {
+  transition: all 0.3s ease;
+}
+
+.mobile-menu li.dropdown-active .btn-dropdown .svg-icon {
   transform: rotate(180deg);
+}
+
+.btn-dropdown .icon-chevron-down {
+  width: 12px;
 }
 
 .mobile-menu ul.sub-menu {
@@ -946,9 +955,19 @@ a:hover ~ .inline-icon {
   margin-bottom: 60px;
 }
 
+.section-title .icon-link-arrow {
+  width: 34px;
+}
+
+@media screen and (max-width: 1199px) {
+  .section-title .icon-link-arrow {
+    width: 24px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .section-title .icon-link-arrow {
-    width: 20px;
+    width: 22px;
   }
 }
 
@@ -1038,6 +1057,7 @@ a:hover ~ .inline-icon {
 [ PAGE INDEX.HTML ]*/
 
 /* section-hero-video */
+
 .section-hero-video {
   position: relative;
   display: flex;
@@ -1065,19 +1085,21 @@ a:hover ~ .inline-icon {
 .overlay-border-top {
   position: absolute;
   top: -1px;
-  left: 0;
-  right: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .overlay-border-bottom {
   position: absolute;
-  left: 0;
-  right: 0;
   bottom: -1px;
   width: 100%;
-  height: auto;
+  height: 100%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .section-hero-video .hero-heading {
@@ -1317,6 +1339,89 @@ a:hover ~ .inline-icon {
   }
 }
 
+/* section-map */
+
+.section-map {
+  position: relative;
+  padding: 60px 0;
+  background-color: #e2e2e2;
+}
+
+/* map */
+
+.app-google-maps {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  bottom: 0;
+  width: 50vw;
+  z-index: 1;
+}
+
+.section-map .col-lg-5:after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 179px);
+  bottom: 14px;
+  width: 180px;
+  background: linear-gradient(90deg, hsla(0, 0%, 89%, 0) 0, #e2e2e2 80%);
+  z-index: 2;
+}
+
+/* mapSwiper */
+
+.mapSwiper-area {
+  position: relative;
+}
+
+.mapSwiper-area .swiper-button-next {
+  right: -50px;
+}
+
+.mapSwiper-area .swiper-button-prev {
+  left: -50px;
+}
+
+/* card-map-item */
+
+.card-map-item {
+  border: none;
+  background-color: transparent;
+}
+
+.card-map-item .card-title {
+  margin-bottom: 1.5rem;
+}
+
+.card-map-item .card-subtitle {
+  margin-bottom: 1.5rem;
+}
+
+.card-map-item .card-fact {
+  margin-bottom: 2rem;
+}
+
+.card-map-item .card-fact .fact-icon-area,
+.card-map-item .card-fact .fact-text-area {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.card-map-item .card-fact .fact-icon-area {
+  margin-right: 15px;
+}
+
+.card-map-item .card-img-wrapper {
+  margin-bottom: 2rem;
+}
+
+.card-map-item .card-map-link,
+.card-map-item .card-phones {
+  margin-bottom: 15px;
+}
+
 /*//////////////////////////////////////////////////////////////////
 [ PAGE BRANDS.HTML ]*/
 
@@ -1523,6 +1628,15 @@ a:hover ~ .inline-icon {
     font-size: 24px;
   }
 
+  .card-blog-small .card-title a {
+    border-bottom: 1px solid;
+    border-color: rgba(111, 186, 31, 0.3);
+  }
+
+  .card-blog-small .card-title a:hover {
+    border-color: var(--theme-color-green);
+  }
+
   .card-blog-small .card-title .icon-link-arrow {
     display: none;
   }
@@ -1559,7 +1673,7 @@ a:hover ~ .inline-icon {
 .navigation-pagination ul li .current {
   color: var(--theme-color-green);
   font-weight: 400;
-  border-color: var(--theme-color-green);
+  border-color: transparent;
 }
 
 @media screen and (min-width: 992px) {
@@ -1714,6 +1828,7 @@ a:hover ~ .inline-icon {
 
 .card-benefits .card-footer .icon-link-arrow {
   width: 20px;
+  margin-left: 0.25em;
 }
 
 @media screen and (min-width: 992px) {
@@ -1771,6 +1886,7 @@ a:hover ~ .inline-icon {
 
 .card-responsibility .card-footer .icon-link-arrow {
   width: 20px;
+  margin-left: 0.25em;
 }
 
 @media screen and (min-width: 992px) {

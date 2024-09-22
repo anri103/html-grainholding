@@ -66,3 +66,13 @@ const jobSwiper = new Swiper('.jobSwiper', {
     el: '.swiper-pagination',
   },
 });
+
+const mapSwiper = new Swiper('.mapSwiper', {
+  slidesPerView: 1,
+  loop: true,
+  freeMode: false,
+  navigation: {
+    nextEl: '.mapSwiper-area .swiper-button-next',
+    prevEl: '.mapSwiper-area .swiper-button-prev',
+  },
+});
