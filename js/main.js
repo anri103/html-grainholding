@@ -33,20 +33,21 @@
 // Sliders
 
 const historySwiper = new Swiper('.historySwiper', {
-  slidesPerView: 'auto',
-  freeMode: false,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  freeMode: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  // breakpoints: {
-  //   768: {
-  //     slidesPerView: 2,
-  //   },
-  //   992: {
-  //     slidesPerView: 3,
-  //   },
-  // },
+  breakpoints: {
+    768: {
+      slidesPerView: 'auto',
+    },
+    // 992: {
+    //   slidesPerView: 3,
+    // },
+  },
 });
 
 const jobSwiper = new Swiper('.jobSwiper', {
@@ -69,6 +70,7 @@ const jobSwiper = new Swiper('.jobSwiper', {
 
 const mapSwiper = new Swiper('.mapSwiper', {
   slidesPerView: 1,
+  spaceBetween: 15,
   loop: true,
   freeMode: false,
   navigation: {

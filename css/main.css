@@ -1,7 +1,7 @@
 /*!
  * Theme: GrainHolding / Russkiy Hleb
- * Author: STARTSITE - Andrey Galkin
- * Version: 1.1
+ * Author: Andrey Galkin
+ * Version: 1.2
  */
 
 /*------------------------------------------------------------------
@@ -12,7 +12,6 @@
 + LINKS
 + FORMS
 + BUTTONS
-+ ANIMATIONS
 + BASE STYLES
 
 + CONTENT
@@ -38,13 +37,10 @@
 /*//////////////////////////////////////////////////////////////////
 [ IMPORT FONTS ]*/
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+/* https://fontsloader.com/types/roboto */
+@import url('../fonts/roboto/stylesheet.css');
 
 @import url('../fonts/als_mirta/stylesheet.css');
-
-/* @import url('../fonts/fontello/stylesheet.css'); */
-
-/* @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"); */
 
 /*//////////////////////////////////////////////////////////////////
 [ ROOT ]*/
@@ -298,44 +294,6 @@ label {
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ ANIMATIONS ]*/
-
-/* .hover-shine:hover {
-  opacity: 1;
-  -webkit-animation: flash .8s;
-  animation: flash .8s;
-}
-
-@-webkit-keyframes flash {
-  0% {
-    opacity: .65
-  }
-
-  100% {
-    opacity: 1
-  }
-}
-
-@keyframes flash {
-  0% {
-    opacity: .65
-  }
-
-  100% {
-    opacity: 1
-  }
-}
-
-.hover-opacity {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.hover-opacity:hover {
-  opacity: .65;
-} */
-
-/*//////////////////////////////////////////////////////////////////
 [ BASE STYLES ]*/
 
 .ff-main {
@@ -449,6 +407,31 @@ label {
 
 .sidebar-nav .nav-link {
   padding-left: 0;
+}
+
+.nav-underline {
+  --bs-nav-underline-gap: 1rem 60px;
+  --bs-nav-underline-border-width: 1px;
+  --bs-nav-underline-link-active-color: var(--bs-emphasis-color);
+  gap: var(--bs-nav-underline-gap);
+}
+
+.nav-underline .nav-link {
+  padding: 0;
+  border-bottom: var(--bs-nav-underline-border-width) solid transparent;
+  border-color: rgba(111, 186, 31, 0.3);
+}
+
+.nav-underline .nav-link:focus,
+.nav-underline .nav-link:hover {
+  border-color: currentcolor;
+}
+
+.nav-underline .nav-link.active,
+.nav-underline .show>.nav-link {
+  font-weight: 500;
+  color: var(--bs-nav-underline-link-active-color);
+  border-color: currentcolor;
 }
 
 .bg-color-light-grey {
@@ -984,9 +967,9 @@ a:hover ~ .inline-icon {
   position: absolute;
   top: 50%;
   display: block;
-  width: 36px;
-  height: 54px;
-  margin-top: -27px;
+  width: 18px;
+  height: 27px;
+  margin-top: -13.5px;
   opacity: .5;
   background: url(../images/arr.png) no-repeat;
   background-size: contain;
@@ -1001,6 +984,11 @@ a:hover ~ .inline-icon {
 .swiper-button-next {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
 }
 
 /* section-hero-title */
@@ -1210,9 +1198,32 @@ a:hover ~ .inline-icon {
 
 /* section-history */
 
+.section-history .nav-underline {
+  margin-bottom: 32px;
+}
+
+.section-history .tab-pane .tab-text {
+  max-width: 900px;
+  margin-bottom: 46px;
+}
+
+/* .historySwiper {
+  padding: 0 20px;
+} */
+
 .historySwiper .swiper-slide {
   width: 320px;
 }
+
+.historySwiper .swiper-button-prev {
+  left: 0;
+}
+
+.historySwiper .swiper-button-next {
+  right: 0;
+}
+
+/* card-history */
 
 .card-history {
   border: none;
@@ -1220,11 +1231,11 @@ a:hover ~ .inline-icon {
 }
 
 .card-history .card-body {
-  padding: 1rem 4rem;
+  padding: 0;
 }
 
 .card-history .card-date {
-  margin-bottom: 111px;
+  margin-bottom: 54px;
 }
 
 .card-history .card-year {
@@ -1256,14 +1267,31 @@ a:hover ~ .inline-icon {
 } */
 
 .card-history .card-text {
-  font-size: 24px;
+  font-size: 15px;
   font-weight: 300;
   letter-spacing: -0.01em;
+  padding-right: 2rem;
 }
 
 @media screen and (min-width: 768px) {
+  .section-history .nav-underline {
+    margin-bottom: 71px;
+  }
+
+  .historySwiper {
+    padding: 0 50px;
+  }
+
   .historySwiper .swiper-slide {
     width: 420px;
+  }
+
+  .card-history .card-date {
+    margin-bottom: 111px;
+  }
+
+  .card-history .card-text {
+    font-size: 24px;
   }
 }
 
@@ -1349,25 +1377,40 @@ a:hover ~ .inline-icon {
 
 /* map */
 
+.map-spacer {
+  height: 0;
+}
+
 .app-google-maps {
   position: absolute;
   top: 0;
-  right: 50%;
+  left: 0;
   bottom: 0;
   width: 50vw;
-  z-index: 1;
 }
 
-.section-map .col-lg-5:after {
+.app-google-maps::after {
   content: "";
   pointer-events: none;
   position: absolute;
   top: 0;
-  left: calc(50% - 179px);
+  right: 0;
   bottom: 14px;
+  display: block;
   width: 180px;
   background: linear-gradient(90deg, hsla(0, 0%, 89%, 0) 0, #e2e2e2 80%);
-  z-index: 2;
+}
+
+@media screen and (min-width: 768px) {
+  .map-spacer {
+    height: 600px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .map-spacer {
+    height: 710px;
+  }
 }
 
 /* mapSwiper */
@@ -1377,11 +1420,31 @@ a:hover ~ .inline-icon {
 }
 
 .mapSwiper-area .swiper-button-next {
-  right: -50px;
+  right: -30px;
 }
 
 .mapSwiper-area .swiper-button-prev {
-  left: -50px;
+  left: -30px;
+}
+
+@media screen and (min-width: 768px) {
+  .mapSwiper-area .swiper-button-next {
+    right: -20px;
+  }
+  
+  .mapSwiper-area .swiper-button-prev {
+    left: -20px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mapSwiper-area .swiper-button-next {
+    right: -50px;
+  }
+  
+  .mapSwiper-area .swiper-button-prev {
+    left: -50px;
+  }
 }
 
 /* card-map-item */
@@ -1389,6 +1452,10 @@ a:hover ~ .inline-icon {
 .card-map-item {
   border: none;
   background-color: transparent;
+}
+
+.card-map-item .card-body {
+  padding: 0;
 }
 
 .card-map-item .card-title {
