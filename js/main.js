@@ -16,9 +16,9 @@
     layoutMode: 'fitRows'
   });
 
-  $('.isotope-nav li button').click(function () {
+  $('.isotope-nav li a').click(function () {
 
-    $('.isotope-nav li button').removeClass('active');
+    $('.isotope-nav li a').removeClass('active');
     $(this).addClass('active');
 
     var selector = $(this).attr('data-filter');
@@ -27,6 +27,18 @@
     });
     return false;
   });
+
+  // ScrollBalance
+
+  var $columnBalance = $('.column-balance');
+
+  // Проверяем наличие элемента
+  if ($columnBalance.length) {
+    // Инициализация ScrollBalance
+    var sb = new ScrollBalance($columnBalance);
+    sb.bind();  // bind window events (required)
+    sb.initialize();  // call when column content changes
+  }
 
 })(jQuery);
 
