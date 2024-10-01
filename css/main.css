@@ -2084,6 +2084,26 @@ a:hover ~ .inline-icon {
 /*//////////////////////////////////////////////////////////////////
 [ PAGE BLOG-ITEM.HTML ]*/
 
+.section-blog-text h2,
+.section-blog-text h3,
+.section-blog-text h4,
+.section-blog-text h5 {
+  margin-bottom: 2rem;
+}
+
+.section-blog-text p,
+.section-blog-text h6 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .section-blog-text > .container {
+    max-width: 900px;
+  }
+}
+
+
 @media (min-width: 1400px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
       max-width: 1424px;
