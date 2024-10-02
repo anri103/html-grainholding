@@ -1950,15 +1950,14 @@ a:hover ~ .inline-icon {
   margin-bottom: 25px;
 }
 
+.card-responsibility .card-body {
+  padding: 0;
+}
+
 .card-responsibility .card-title {
-  flex: 1 1 0%;
   max-width: 370px;
   font-size: 19px;
   margin-bottom: 18px;
-}
-
-.card-responsibility .card-body {
-  padding: 0;
 }
 
 .card-responsibility .card-description {
@@ -1984,6 +1983,7 @@ a:hover ~ .inline-icon {
 
 @media screen and (min-width: 992px) {
   .card-responsibility .card-title {
+    min-height: 65px;
     font-size: 24px;
   }
 
@@ -2013,13 +2013,16 @@ a:hover ~ .inline-icon {
   margin-bottom: 60px;
 }
 
-.job-wrap>*+* {
-  margin-top: 30px;
+.job-area .job-category {
+  margin-bottom: 24px;
 }
 
-.job-list>*+* {
-  margin-top: 30px;
-}
+/* .job-area .job-link-area {
+} */
+
+/* .job-area .job-list {
+  padding: 24px;
+} */
 
 /*//////////////////////////////////////////////////////////////////
 [ PAGE PRODUCT-ITEM.HTML ]*/
