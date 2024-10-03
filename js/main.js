@@ -63,7 +63,7 @@ const historySwiper = new Swiper('.historySwiper', {
 });
 
 const jobSwiper = new Swiper('.jobSwiper', {
-  slidesPerView: 1.5,
+  slidesPerView: 1,
   spaceBetween: 30,
   centeredSlides: true,
   loop: true,
@@ -77,6 +77,14 @@ const jobSwiper = new Swiper('.jobSwiper', {
   },
   pagination: {
     el: '.swiper-pagination',
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 1.25,
+    },
+    992: {
+      slidesPerView: 1.5,
+    },
   },
 });
 
